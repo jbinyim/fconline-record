@@ -11,8 +11,8 @@ li {
   list-style: none;
 }
 
-@media screen and (min-width:1280px) and (max-width:1920px){
-    header{width:1920px; margin-bottom:300px;}
+@media screen and (min-width:1280px){
+    header{width:1920px; margin:0 auto 300px;}
     header:after{content: ''; display: block; clear: both;}
     header > h1{float:left; width:15%; text-align: center; padding:30px;}
     header > nav{float:left; width:85%; background-color: rgba(0,92,0,0.5);}
