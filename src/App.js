@@ -1,30 +1,17 @@
 import "./App.css";
-
+import Main from "./components/Main";
+import Header from "./components/Header";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
-  return <div className="App">
-
-
-    <header>
-      <h1>FC GG.KR</h1>
-      <nav>
-        <ul>
-          <li><a href="https://fconline.nexon.com/main/index" target='_blank'>FC Online</a></li>
-          <li>선수 검색</li>
-          <li>랭커 닉네임조회</li>
-        </ul>
-      </nav>
-    </header>
-    <section className="searchArea">
-      <div>
-        <form>
-          <input type="search" placeholder="구단주명"></input>
-          <button type="button">검색</button>
-        </form>
-      </div>
-    </section>
-
-  </div>;
+  return (
+    <div className="App">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Main />} />
+      </Routes>
+    </div>
+  );
 }
 
 export default App;
