@@ -1,10 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <header>
-        <h1>FC GG.KR</h1>
+        <h1 onClick={() => navigate("/")}>FC GG.KR</h1>
         <nav>
           <ul>
             <li>
