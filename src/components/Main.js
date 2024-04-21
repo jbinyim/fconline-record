@@ -40,7 +40,7 @@ const Main = ({ setUserOuid }) => {
               value={ouid}
               onKeyUp={oncheckEnter}
               onChange={onChangeSearch}
-              type="search"
+              type="text"
               placeholder="구단주명"
             ></input>
             <button type="button" onClick={() => navigate("/userinfo")}>

@@ -6,7 +6,9 @@ const Header = () => {
   return (
     <div>
       <header>
-        <h1 onClick={() => navigate("/")}>FC GG.KR</h1>
+        <span>
+            <h1 onClick={() => navigate("/")}>FC GG.KR</h1>
+        </span>
         <nav>
           <ul>
             <li>
