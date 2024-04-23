@@ -14,7 +14,7 @@ li {
 
 @media screen and (min-width:1280px){
     body{background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);}
-    header{width:1920px; margin:0 auto 300px;}
+    header{width:1920px; margin:0 auto 150px;}
     header:after{content: ''; display: block; clear: both;}
     header > span{float:left; width:15%; display:block; border-radius: 10px; border: 2px solid white; }
     header > span > h1{display:block; width:60%; margin:0 auto; text-align: center; cursor: pointer; color:black; font-style: italic; font-weight: 900; font-size:35px;}
@@ -33,7 +33,7 @@ li {
     .searchArea > div > form input:first-of-type::placeholder{color:gray; font-size:20px; border: none;}
 
     
-    .infoArea{width:1920px; margin:0 auto; position: relative;}
+    .infoArea{width:1920px; margin:0 auto 100px; position: relative;}
     .infoArea > div{width:1280px; margin:0 auto; background-color: white; border-radius: 50px; display: flex; box-shadow: 1px 1px 10px 2px gray; padding:50px 5%;}
     .infoArea > div > div{width:30%; text-align: center;}
     .infoArea > div > div img{display:block; margin:0 auto 10px;}
@@ -41,5 +41,29 @@ li {
     .infoArea > div > div:not(:nth-child(3)) > p:first-of-type{margin-bottom:10px;}
     .infoArea > div > div:nth-child(3) h2{font-size: 40px; margin-bottom:20px;}
     .infoArea > div > div:nth-child(3) p{font-size:20px; font-weight: 700; font-style: italic;}
-    .infoArea > button[type="button"]{position:absolute; top: 40%; right:19%; padding:5px 15px; border-radius: 20px; border: 1px solid black; box-sizing: border-box;}
-  }
+    .infoArea > button[type="button"]{position:absolute; top: 40%; right:19%; padding:5px 15px; border-radius: 20px; border: 1px solid black; box-sizing: border-box; cursor: pointer;}
+
+
+
+    .recordArea{width:1920px; margin:0 auto;}
+    .recordArea > div{width:1280px; margin: 0 auto; border-bottom: 1px solid gray;}
+    .recordArea > div:nth-child(1) > ul{width:100%;}
+    .recordArea > div:nth-child(1) > ul:after{content: ''; display: block; clear: both;}
+    .recordArea > div:nth-child(1) > ul li{float:left; margin-right:5%; padding:10px 0;}
+    .recordArea > div:nth-child(1) > ul li a{font-weight: 700; font-size: 20px;}
+    .recordArea > div:nth-child(1) > ul li.activated a{color:white; padding:10px 0; border-bottom: 2px solid #ff3322;}
+    .recordArea > div:nth-child(1) > ul li:hover a{color:white; padding:10px 0; border-bottom: 2px solid #ff3322;}
+
+    .recordArea > div:nth-child(1) > #tab1 ul{width:100%; background-color: white; margin:0 auto 10px; border-radius: 10px; border: 3px solid white; background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);}
+    .recordArea > div:nth-child(1) > #tab1 ul::after{content: ''; display: block; clear: both;}
+    .recordArea > div:nth-child(1) > #tab1 ul li{float:left; padding:30px 0;}
+    .recordArea > div:nth-child(1) > #tab1 ul li:nth-child(1){width:15%; margin-left:4%;}
+    .recordArea > div:nth-child(1) > #tab1 ul li:nth-child(2){width:70%; margin:0 auto; text-align: center;}
+    .recordArea > div:nth-child(1) > #tab1 ul li:nth-child(3){width:10%;}
+    .recordArea > div:nth-child(1) > #tab1 ul li:nth-child(4){width:1%; background-color: #6699ff; border-radius: 0px 5px 5px 0;}
+    
+    /* *패배-임시css */
+    .recordArea > div:nth-child(1) > #tab1 ul:first-child li:nth-child(4){background-color: #ff3366;}
+
+
+}
