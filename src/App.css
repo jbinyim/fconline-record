@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -26,11 +27,10 @@ li {
 
     .searchArea{width:1920px; margin: 0 auto;}
     .searchArea > div{width:66.66%; margin:0 auto; position:relative;}
-    .searchArea > div > form{width:100%; padding:0 3.12%; border-radius:50px; border:2px solid #ff3322; background-color: white;}
-    .searchArea > div > form input[type="text"]{width:90%; font-size:30px; padding:20px 0; border:none; color:black;}
-    .searchArea > div > form input[type="text"]:focus{outline:none;}
-    .searchArea > div > form button[type="button"]{width:10%; padding:20px 0; font-size:30px; border: none; background-color: white; cursor: pointer;}
-    .searchArea > div > form input:first-of-type::placeholder{color:gray; font-size:20px; border: none;}
+    .searchArea > div input[type="text"]{width:100%; font-size:30px; padding:20px 50px 20px 30px; border:none; color:black; border-radius: 20px; box-shadow: 1px 1px 10px 5px gray;}
+    .searchArea > div input[type="text"]:focus{outline:none;}
+    .searchArea > div input[type="text"]::placeholder{color:gray; font-size:20px; border: none;}
+    .searchArea > div > span{position:absolute; top:30%; right:2%; cursor:pointer; font-size:20px;}
 
     
     .infoArea{width:1920px; margin:0 auto 100px; position: relative;}
@@ -107,9 +107,12 @@ li {
     .recordArea > div:nth-child(1) > #tab4 article .point > div:nth-child(3){margin-bottom:20px;}
     .recordArea > div:nth-child(1) > #tab4 article .point:after{content: ''; display: block; clear: both;}
     .recordArea > div:nth-child(1) > #tab4 article .point > div > span{display:block; text-align: center; padding:10px 0;}
-    .recordArea > div:nth-child(1) > #tab4 article .point > div > div{padding:30px 0;}
+    .recordArea > div:nth-child(1) > #tab4 article .point > div > div{padding:30px 0; border-top: 1px solid #D5D5D5;}
     .recordArea > div:nth-child(1) > #tab4 article .point > div > div > span{display:inline-flex; width:10%;}
-    .recordArea > div:nth-child(1) > #tab4 article .point > div > div > div{display:inline-flex; width:80%;}
+    .recordArea > div:nth-child(1) > #tab4 article .point > div > div > span:nth-child(1){padding-left:5%;}
+    .recordArea > div:nth-child(1) > #tab4 article .point > div > div .rank1{font-weight: 700; font-size:18px;}
+    .recordArea > div:nth-child(1) > #tab4 article .point > div > div .norank1{font-size:12px;}
+    .recordArea > div:nth-child(1) > #tab4 article .point > div > div > div{display:inline-flex; width:75%;}
 
 
 }

@@ -19,7 +19,10 @@ const Match = () => {
             <a href="">선수별 공격포인트</a>
           </li>
         </ul>
+
+
         <GameMode />
+
       </div>
     </div>
   );
