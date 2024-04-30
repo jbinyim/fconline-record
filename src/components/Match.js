@@ -124,7 +124,7 @@ const Match = () => {
               <div>
                 <span>골(득점왕)</span>
                 <div>
-                  <span>1</span>
+                  <span className="rank1">1</span>
                   <div>
                     <span>
                       <img src=""></img>
@@ -163,7 +163,7 @@ const Match = () => {
               <div>
                 <span>어시스트</span>
                 <div>
-                  <span>1</span>
+                  <span className="rank1">1</span>
                   <div>
                     <span>
                       <img src=""></img>
@@ -202,7 +202,7 @@ const Match = () => {
               <div>
                 <span>옐로카드</span>
                 <div>
-                  <span>1</span>
+                  <span className="rank1">1</span>
                   <div>
                     <span>
                       <img src=""></img>
@@ -241,7 +241,7 @@ const Match = () => {
               <div>
                 <span>골 기댓값(XG)</span>
                 <div>
-                  <span>1</span>
+                  <span className="rank1">1</span>
                   <div>
                     <span>
                       <img src=""></img>
@@ -280,7 +280,7 @@ const Match = () => {
               <div>
                 <span>평점</span>
                 <div>
-                  <span>1</span>
+                  <span className="rank1">1</span>
                   <div>
                     <span>
                       <img src=""></img>
@@ -319,7 +319,7 @@ const Match = () => {
               <div>
                 <span>교체출전 공격포인트</span>
                 <div>
-                  <span>1</span>
+                  <span className="rank1">1</span>
                   <div>
                     <span>
                       <img src=""></img>
