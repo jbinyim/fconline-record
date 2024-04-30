@@ -1,29 +1,29 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fcBasicAction } from "../redux/action/fcBasicAction";
+import { getDivision } from "../util";
 
 const UserInfoBox = ({ userOuid }) => {
-  const [ouid, setOuid] = useState("");
-
-  console.log(userOuid);
+  //const [division, setDivision] = useState([]);
   const dispatch = useDispatch();
-  const { userBasic } = useSelector((state) => state.fcBasic);
+  const { userBasic, userMaxDivision } = useSelector((state) => state.fcBasic);
 
   const getFcBasic = async () => {
-    dispatch(fcBasicAction.getBasic(ouid));
+    dispatch(fcBasicAction.getBasic(userOuid));
   };
+
+  console.log(userMaxDivision);
   useEffect(() => {
     getFcBasic();
-    setOuid(userOuid);
-  }, []);
-  console.log(userBasic);
+  }, [userOuid]);
+
   return (
     <div>
       <section className="infoArea">
         <div>
           <div>
-            <img src="https://ssl.nexon.com/s2/game/fo4/obt/rank/large/update_2009/ico_rank1.png"></img>
-            <p>공식경기 1:1 역대 최고 티어 - 챔피언스</p>
+            <img src="https://ssl.nexon.com/s2/game/fo4/obt/rank/large/update_2009/ico_rank1.png" />
+            <p>공식경기 1:1 역대 최고 티어 - </p>
             <p>최고 티어 달성 날짜 - 0000.00.00</p>
           </div>
           <div>
@@ -32,8 +32,8 @@ const UserInfoBox = ({ userOuid }) => {
             <p>최고 티어 달성 날짜 - 0000.00.00</p>
           </div>
           <div>
-            <h2>닉네임 : 호날두</h2>
-            <p>LV.100</p>
+            <h2>닉네임 : {userBasic.nickname}</h2>
+            <p>LV. {userBasic.level}</p>
           </div>
         </div>
         <button type="button">전적갱신</button>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Match from "./Match";
 import UserInfoBox from "./UserInfoBox";
 import { useDispatch, useSelector } from "react-redux";
@@ -18,7 +18,7 @@ const UserInfo = () => {
 
   useEffect(() => {
     getFcUser();
-  }, []);
+  }, [query]);
   return (
     <div>
       <UserInfoBox userOuid={userOuid.ouid} />

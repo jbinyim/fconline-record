@@ -7,12 +7,16 @@ const getBasic = (ouid) => {
         type: "GET_BASIC_REQUEST",
       });
       const usersBasicApi = api.get(`/user/basic?ouid=${ouid}`);
-
-      const [userBasic] = await Promise.all([usersBasicApi]);
+      const userMaxDivisionApi = api.get(`/user/maxdivision?ouid=${ouid}`);
+      const [userBasic, userMaxDivision] = await Promise.all([
+        usersBasicApi,
+        userMaxDivisionApi,
+      ]);
       dispatch({
         type: "GET_BASIC_SUCCESS",
         payload: {
           userBasic: userBasic.data,
+          userMaxDivision: userMaxDivision.data,
         },
       });
     } catch (error) {
