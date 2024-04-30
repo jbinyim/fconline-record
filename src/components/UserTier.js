@@ -15,13 +15,13 @@ const UserTier = ({ text, userMaxDivision }) => {
         {text} 역대 최고 티어 -{" "}
         {userMaxDivision?.division
           ? getDivision(userMaxDivision?.division)
-          : "데이터가 없습니다"}
+          : "조회되지 않습니다"}
       </p>
       <p>
         최고 티어 달성 날짜 -{" "}
         {userMaxDivision?.achievementDate
           ? userMaxDivision?.achievementDate.slice(0, 10)
-          : "데이터가 없습니다"}
+          : "조회되지 않습니다"}
       </p>
     </div>
   );
