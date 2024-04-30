@@ -1,5 +1,6 @@
 import React from "react";
 import GameMode from "./GameMode";
+import AttackPoints from "./AttackPoints";
 
 const Match = () => {
   return (
@@ -20,9 +21,8 @@ const Match = () => {
           </li>
         </ul>
 
-
         <GameMode />
-
+        <AttackPoints />
       </div>
     </div>
   );
