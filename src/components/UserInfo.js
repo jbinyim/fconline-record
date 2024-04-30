@@ -1,30 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Match from "./Match";
+import UserInfoBox from "./UserInfoBox";
+import { useDispatch, useSelector } from "react-redux";
+import { fcAction } from "../redux/action/fcAction";
+import { useSearchParams } from "react-router-dom";
 
-const UserInfo = ({ userOuid }) => {
-  console.log(userOuid);
+const UserInfo = () => {
+  const [query, setQuery] = useSearchParams("");
+  const dispatch = useDispatch();
+  const { userOuid } = useSelector((state) => state.fc);
 
+  const getFcUser = async () => {
+    const searchQuery = query.get("q");
+
+    dispatch(fcAction.getFc(searchQuery));
+  };
+
+  useEffect(() => {
+    getFcUser();
+  }, []);
   return (
     <div>
-      <section className="infoArea">
-        <div>
-          <div>
-            <img src="https://ssl.nexon.com/s2/game/fo4/obt/rank/large/update_2009/ico_rank1.png"></img>
-            <p>공식경기 1:1 역대 최고 티어 - 챔피언스</p>
-            <p>최고 티어 달성 날짜 - 0000.00.00</p>
-          </div>
-          <div>
-            <img src="https://ssl.nexon.com/s2/game/fo4/obt/rank/large/update_2009/ico_rank1.png"></img>
-            <p>볼타 역대 최고 티어 - 루키</p>
-            <p>최고 티어 달성 날짜 - 0000.00.00</p>
-          </div>
-          <div>
-            <h2>닉네임 : 발긔</h2>
-            <p>LV.100</p>
-          </div>
-        </div>
-        <button type="button">전적갱신</button>
-      </section>
+      <UserInfoBox userOuid={userOuid.ouid} />
       <Match />
     </div>
   );

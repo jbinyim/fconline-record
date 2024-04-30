@@ -5,13 +5,13 @@ const Match = () => {
     <div className="recordArea">
       <div>
         <ul className="tabMenu">
-          <li data-tabNumb="tab1" className="activated">
+          <li className="activated">
             <a href="">1:1 공식 경기</a>
           </li>
-          <li data-tabNumb="tab2">
+          <li>
             <a href="">감독 모드</a>
           </li>
-          <li data-tabNumb="tab3">
+          <li>
             <a href="">친선 경기</a>
           </li>
           <li>
@@ -22,31 +22,31 @@ const Match = () => {
           공식경기 tabPage1
           <ul>
             <li>0000.00.00 / 00시00분</li>
-            <li>발긔 0 : 0 뱔기</li>
+            <li>호날두 0 : 0 메시</li>
             <li>패배</li>
             <li>&#60;</li>
           </ul>
           <ul>
             <li>0000.00.00 / 00시00분</li>
-            <li>발긔 0 : 0 뱔기</li>
+            <li>호날두 0 : 0 메시</li>
             <li>승리</li>
             <li>&#60;</li>
           </ul>
           <ul>
             <li>0000.00.00 / 00시00분</li>
-            <li>발긔 0 : 0 뱔기</li>
+            <li>호날두 0 : 0 메시</li>
             <li>승리</li>
             <li>&#60;</li>
           </ul>
           <ul>
             <li>0000.00.00 / 00시00분</li>
-            <li>발긔 0 : 0 뱔기</li>
+            <li>호날두 0 : 0 메시</li>
             <li>승리</li>
             <li>&#60;</li>
           </ul>
           <ul>
             <li>0000.00.00 / 00시00분</li>
-            <li>발긔 0 : 0 뱔기</li>
+            <li>호날두 0 : 0 메시</li>
             <li>승리</li>
             <li>&#60;</li>
           </ul>
@@ -55,31 +55,31 @@ const Match = () => {
           감독모드 tabPage2
           <ul>
             <li>1111.11.11 / 00시00분</li>
-            <li>발긔 0 : 0 뱔기</li>
+            <li>호날두 0 : 0 메시</li>
             <li>패배</li>
             <li>&#60;</li>
           </ul>
           <ul>
             <li>1111.11.11 / 00시00분</li>
-            <li>발긔 0 : 0 뱔기</li>
+            <li>호날두 0 : 0 메시</li>
             <li>승리</li>
             <li>&#60;</li>
           </ul>
           <ul>
             <li>1111.11.11 / 00시00분</li>
-            <li>발긔 0 : 0 뱔기</li>
+            <li>호날두 0 : 0 메시</li>
             <li>승리</li>
             <li>&#60;</li>
           </ul>
           <ul>
             <li>1111.11.11 / 00시00분</li>
-            <li>발긔 0 : 0 뱔기</li>
+            <li>호날두 0 : 0 메시</li>
             <li>승리</li>
             <li>&#60;</li>
           </ul>
           <ul>
             <li>1111.11.11 / 00시00분</li>
-            <li>발긔 0 : 0 뱔기</li>
+            <li>호날두 0 : 0 메시</li>
             <li>승리</li>
             <li>&#60;</li>
           </ul>
@@ -88,31 +88,31 @@ const Match = () => {
           친선경기 tabPage3
           <ul>
             <li>2222.22.22 / 00시00분</li>
-            <li>발긔 0 : 0 뱔기</li>
+            <li>호날두 0 : 0 메시</li>
             <li>패배</li>
             <li>&#60;</li>
           </ul>
           <ul>
-            <li>2222.22.22 / 00시00분</li>
-            <li>발긔 0 : 0 뱔기</li>
+            <li>호날두.22.22 / 00시00분</li>
+            <li>발긔 0 : 0 메시</li>
             <li>승리</li>
             <li>&#60;</li>
           </ul>
           <ul>
             <li>2222.22.22 / 00시00분</li>
-            <li>발긔 0 : 0 뱔기</li>
+            <li>호날두 0 : 0 메시</li>
             <li>승리</li>
             <li>&#60;</li>
           </ul>
           <ul>
             <li>2222.22.22 / 00시00분</li>
-            <li>발긔 0 : 0 뱔기</li>
+            <li>호날두 0 : 0 메시</li>
             <li>승리</li>
             <li>&#60;</li>
           </ul>
           <ul>
             <li>2222.22.22 / 00시00분</li>
-            <li>발긔 0 : 0 뱔기</li>
+            <li>호날두 0 : 0 메시</li>
             <li>승리</li>
             <li>&#60;</li>
           </ul>

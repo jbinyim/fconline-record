@@ -1,12 +1,13 @@
 import api from "../api";
 
-const getFc = (ouid) => {
+const getFc = (nickname) => {
   return async (dispatch) => {
     try {
       dispatch({
         type: "GET_FC_REQUEST",
       });
-      const userOuidApi = api.get(`id?nickname=${ouid}`);
+      const userOuidApi = api.get(`/id?nickname=${nickname}`);
+
       const [userOuid] = await Promise.all([userOuidApi]);
       dispatch({
         type: "GET_FC_SUCCESS",
