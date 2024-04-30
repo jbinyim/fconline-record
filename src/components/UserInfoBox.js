@@ -27,12 +27,12 @@ const UserInfoBox = ({ userOuid }) => {
           <UserTier text="감독모드" userMaxDivision={userMaxDivision[1]} />
           <UserTier text="볼타모드" userMaxDivision={userMaxDivision[2]} />
           <div>
-            <h2>닉네임 : {userBasic.nickname}</h2>
-            <p>LV. {userBasic.level}</p>
+            <h2>{userBasic.nickname}</h2>
+            <p>Level. {userBasic.level}</p>
           </div>
         </div>
         <button type="button" onClick={onClickBtn}>
-          전적갱신
+          갱신
         </button>
       </section>
     </div>

@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Song+Myung&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -15,10 +15,10 @@ li {
 
 @media screen and (min-width:1280px){
     body{background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);}
-    header{width:1920px; margin:0 auto 150px;}
+    header{width:1920px; margin:0 auto 150px; font-family: "Jua", sans-serif; }
     header:after{content: ''; display: block; clear: both;}
-    header > span{float:left; width:15%; display:block; border-radius: 10px; border: 2px solid white; }
-    header > span > h1{display:block; width:60%; margin:0 auto; text-align: center; cursor: pointer; color:black; font-style: italic; font-weight: 900; font-size:35px;}
+    header > span{float:left; width:15%; display:block; padding-top:20px}
+    header > span > h1{display:block; width:60%; margin:0 auto; text-align: center; cursor: pointer; color:black; font-weight: 900; font-size:35px;}
     header > nav{float:left; width:85%; background-color: rgba(51,204,102,0.5);}
     header > nav ul:after{content: ''; display: block; clear: both;}
     header > nav ul li{float:right; width:10%; margin-right:5%; line-height: 50px;}
@@ -26,21 +26,21 @@ li {
 
 
     .searchArea{width:1920px; margin: 0 auto;}
-    .searchArea > div{width:66.66%; margin:0 auto; position:relative;}
+    .searchArea > div{width:66.66%; margin:0 auto; position:relative; font-family: "Jua", sans-serif;}
     .searchArea > div input[type="text"]{width:100%; font-size:30px; padding:20px 50px 20px 30px; border:none; color:black; border-radius: 20px; box-shadow: 1px 1px 10px 5px gray;}
     .searchArea > div input[type="text"]:focus{outline:none;}
-    .searchArea > div input[type="text"]::placeholder{color:gray; font-size:20px; border: none;}
+    .searchArea > div input[type="text"]::placeholder{font-family: "Jua", sans-serif; color:gray; font-size:20px; border: none;}
     .searchArea > div > span{position:absolute; top:30%; right:2%; cursor:pointer; font-size:20px;}
 
     
     .infoArea{width:1920px; margin:0 auto 100px; position: relative;}
-    .infoArea > div{width:1280px; margin:0 auto; background-color: white; border-radius: 50px; display: flex; box-shadow: 1px 1px 10px 2px gray; padding:50px 5%;}
-    .infoArea > div > div{width:30%; text-align: center;}
+    .infoArea > div{width:1280px; margin:0 auto; background-color: white; border-radius: 50px; display: flex; box-shadow: 1px 1px 10px 2px gray; padding:50px 5%; font-family: "Song Myung", serif; font-size: 16px;}
+    .infoArea > div > div{width:25%; text-align: center;}
     .infoArea > div > div img{display:block; margin:0 auto 10px;}
-    .infoArea > div > div:not(:nth-child(3)) > p{font-size:12px; font-weight: 700;}
-    .infoArea > div > div:not(:nth-child(3)) > p:first-of-type{margin-bottom:10px;}
-    .infoArea > div > div:nth-child(3) h2{font-size: 40px; margin-bottom:20px;}
-    .infoArea > div > div:nth-child(3) p{font-size:20px; font-weight: 700; font-style: italic;}
+    .infoArea > div > div:not(:nth-child(4)) > p{font-size:12px; font-weight: 700;}
+    .infoArea > div > div:not(:nth-child(4)) > p:first-of-type{margin-bottom:1px;}
+    .infoArea > div > div:nth-child(4) h2{font-size: 30px; padding-top:30px; letter-spacing: -1;}
+    .infoArea > div > div:nth-child(4) p{font-size:20px; font-weight: 700; font-style: italic;}
     .infoArea > button[type="button"]{position:absolute; top: 40%; right:19%; padding:5px 15px; border-radius: 20px; border: 1px solid black; box-sizing: border-box; cursor: pointer;}
 
 
@@ -53,13 +53,13 @@ li {
         .recordArea > div:nth-child(1) > #tab3 ul:hover{padding-bottom:300px; transition-duration: 1s;}
 
 
-    .recordArea > div{width:1280px; margin: 0 auto; border-bottom: 1px solid gray;}
+    .recordArea > div{width:1280px; margin: 0 auto; border-bottom: 1px solid gray; font-family: "Song Myung", serif; font-size: 16px;}
     .recordArea > div:nth-child(1) > ul{width:100%;}
     .recordArea > div:nth-child(1) > ul:after{content: ''; display: block; clear: both;}
-    .recordArea > div:nth-child(1) > ul li{float:left; margin-right:5%; padding:10px 0;}
-    .recordArea > div:nth-child(1) > ul li a{font-weight: 700; font-size: 20px;}
-    .recordArea > div:nth-child(1) > ul li.activated a{color:white; padding:10px 0; border-bottom: 2px solid #ff3322;}
-    .recordArea > div:nth-child(1) > ul li:hover a{color:white; padding:10px 0; border-bottom: 2px solid #ff3322;}
+    .recordArea > div:nth-child(1) > ul li{float:left; margin-right:5%; padding:5px 0;}
+    .recordArea > div:nth-child(1) > ul li a{font-weight: 700; font-size: 20px; padding:5px 0; transition-duration: 0.5s;}
+    .recordArea > div:nth-child(1) > ul li.activated a{color:white; padding:5px 0; border-bottom: 1px solid #ff3322;}
+    .recordArea > div:nth-child(1) > ul li:hover a{color:white; border-bottom: 1px solid #ff3322;}
 
     .recordArea > div:nth-child(1) > #tab1 ul{width:100%; background-color: white; margin:0 auto 10px; border-radius: 10px; border: 3px solid white; background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);}
     .recordArea > div:nth-child(1) > #tab1 ul::after{content: ''; display: block; clear: both;}
@@ -72,29 +72,6 @@ li {
     /* *패배-임시css */
     .recordArea > div:nth-child(1) > #tab1 ul:first-child li:nth-child(4){background-color: #ff3366;}
 
-
-    .recordArea > div:nth-child(1) > #tab2 ul{width:100%; background-color: white; margin:0 auto 10px; border-radius: 10px; border: 3px solid white; background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);}
-    .recordArea > div:nth-child(1) > #tab2 ul::after{content: ''; display: block; clear: both;}
-    .recordArea > div:nth-child(1) > #tab2 ul li{float:left; padding:30px 0;}
-    .recordArea > div:nth-child(1) > #tab2 ul li:nth-child(1){width:15%; margin-left:4%;}
-    .recordArea > div:nth-child(1) > #tab2 ul li:nth-child(2){width:70%; margin:0 auto; text-align: center;}
-    .recordArea > div:nth-child(1) > #tab2 ul li:nth-child(3){width:10%;}
-    .recordArea > div:nth-child(1) > #tab2 ul li:nth-child(4){width:1%; background-color: #6699ff; border-radius: 0px 5px 5px 0;}
-     
-    /* *패배-임시css */
-    .recordArea > div:nth-child(1) > #tab2 ul:first-child li:nth-child(4){background-color: #ff3366;}
-
-
-    .recordArea > div:nth-child(1) > #tab3 ul{width:100%; background-color: white; margin:0 auto 10px; border-radius: 10px; border: 3px solid white; background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);}
-    .recordArea > div:nth-child(1) > #tab3 ul::after{content: ''; display: block; clear: both;}
-    .recordArea > div:nth-child(1) > #tab3 ul li{float:left; padding:30px 0;}
-    .recordArea > div:nth-child(1) > #tab3 ul li:nth-child(1){width:15%; margin-left:4%;}
-    .recordArea > div:nth-child(1) > #tab3 ul li:nth-child(2){width:70%; margin:0 auto; text-align: center;}
-    .recordArea > div:nth-child(1) > #tab3 ul li:nth-child(3){width:10%;}
-    .recordArea > div:nth-child(1) > #tab3 ul li:nth-child(4){width:1%; background-color: #6699ff; border-radius: 0px 5px 5px 0;}
-     
-    /* *패배-임시css */
-    .recordArea > div:nth-child(1) > #tab3 ul:first-child li:nth-child(4){background-color: #ff3366;}
 
 
     .recordArea > div:nth-child(1) > #tab4 article .point > div{float:left; width:32.33%; border-radius: 20px; background-color:white; box-shadow: 1px 1px 10px 2px gray;}
