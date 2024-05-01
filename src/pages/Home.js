@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { fcAction } from "../redux/action/fcAction";
-import UserInfo from "../components/UserInfo";
 
 const Home = () => {
   const [ouid, setOuid] = useState("");

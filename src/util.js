@@ -79,5 +79,7 @@ export const getDivisionImg = (division) => {
       return "https://ssl.nexon.com/s2/game/fo4/obt/rank/large/update_2009/ico_rank16.png";
     case "3100":
       return "https://ssl.nexon.com/s2/game/fo4/obt/rank/large/update_2009/ico_rank17.png";
+    default:
+      return "https://ssl.nexon.com/s2/game/fo4/obt/rank/large/update_2009/ico_rank_default.png";
   }
 };

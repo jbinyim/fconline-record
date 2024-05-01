@@ -8,7 +8,7 @@ const UserTier = ({ text, userMaxDivision }) => {
         src={
           userMaxDivision?.division
             ? getDivisionImg(userMaxDivision?.division)
-            : "X"
+            : "https://ssl.nexon.com/s2/game/fo4/obt/rank/large/update_2009/ico_rank_default.png"
         }
       />
       <p>
