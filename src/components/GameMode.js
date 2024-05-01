@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { fcBasicAction } from "../redux/action/fcBasicAction";
+const type = 50;
+const offset = 0;
 
 const GameMode = ({ toggle, userOuid }) => {
-  const dispatch = useDispatch();
-
   return (
     <div id="tab1" className="tabPage activated">
       <ul>

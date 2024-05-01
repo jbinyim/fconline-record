@@ -6,7 +6,7 @@ import { fcAction } from "../redux/action/fcAction";
 import { useSearchParams } from "react-router-dom";
 
 const UserInfo = () => {
-  const [query, setQuery] = useSearchParams("");
+  const [query, setQuery] = useSearchParams();
   const dispatch = useDispatch();
   const { userOuid } = useSelector((state) => state.fc);
 

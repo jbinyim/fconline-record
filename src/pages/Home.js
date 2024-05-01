@@ -29,6 +29,7 @@ const Home = () => {
         alert("구단주명을 입력해주세요.");
       } else {
         navigate(`/userinfo/?q=${ouid}`);
+        e.target.value = "";
       }
     }
   };
