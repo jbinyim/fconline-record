@@ -15,9 +15,21 @@ const Home = () => {
     setOuid(e.target.value);
   };
 
+  const onClickSearch = () => {
+    if (!ouid) {
+      alert("구단주명을 입력해주세요.");
+    } else {
+      navigate(`/userinfo/?q=${ouid}`);
+    }
+  };
+
   const onChEnter = (e) => {
     if (e.key === "Enter") {
-      navigate(`/userinfo/?q=${ouid}`);
+      if (!ouid) {
+        alert("구단주명을 입력해주세요.");
+      } else {
+        navigate(`/userinfo/?q=${ouid}`);
+      }
     }
   };
 
@@ -34,7 +46,7 @@ const Home = () => {
             type="text"
             placeholder="구단주명"
           />
-          <span>
+          <span onClick={onClickSearch}>
             <FontAwesomeIcon icon={faSearch} />
           </span>
         </div>

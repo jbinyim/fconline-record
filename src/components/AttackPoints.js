@@ -3,7 +3,6 @@ import React from "react";
 const AttackPoints = () => {
   return (
     <div id="tab4" className="tabPage">
-      공격포인트 tabPage4
       <article>
         <div className="point">
           <div>

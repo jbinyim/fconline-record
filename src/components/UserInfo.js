@@ -19,10 +19,11 @@ const UserInfo = () => {
   useEffect(() => {
     getFcUser();
   }, [query]);
+
   return (
     <div>
       <UserInfoBox userOuid={userOuid.ouid} />
-      <Match />
+      <Match userOuid={userOuid.ouid} />
     </div>
   );
 };

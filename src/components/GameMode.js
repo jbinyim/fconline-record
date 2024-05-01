@@ -1,9 +1,11 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-const GameMode = () => {
+const GameMode = ({ toggle, userOuid }) => {
+  const dispatch = useDispatch();
+
   return (
     <div id="tab1" className="tabPage activated">
-      공식경기 tabPage1
       <ul>
         <li>0000.00.00 / 00시00분</li>
         <li>호날두 0 : 0 메시</li>

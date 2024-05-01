@@ -1,6 +1,7 @@
 const initialState = {
   userBasic: {},
   userMaxDivision: {},
+  // userMatch: {},
 };
 
 const fcBasicReducer = (state = initialState, action) => {
@@ -13,6 +14,7 @@ const fcBasicReducer = (state = initialState, action) => {
         ...state,
         userBasic: payload.userBasic,
         userMaxDivision: payload.userMaxDivision,
+        // userMatch: payload.userMatch,
       };
     case "GET_BASIC_FAILURE":
       return { ...state };
