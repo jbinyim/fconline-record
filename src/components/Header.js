@@ -6,9 +6,7 @@ const Header = () => {
   return (
     <div>
       <header>
-        <span>
-            <h1 onClick={() => navigate("/")}>FC GG.KR</h1>
-        </span>
+            <h1 class="outline-button" onClick={() => navigate("/")}>FC GG.KR</h1>
         <nav>
           <ul>
             <li>
@@ -16,8 +14,8 @@ const Header = () => {
                 FC Online
               </a>
             </li>
-            <li>선수 검색</li>
-            <li>랭커 닉네임조회</li>
+            <li><a>선수 검색</a></li>
+            <li><a>랭커 닉네임조회</a></li>
           </ul>
         </nav>
       </header>

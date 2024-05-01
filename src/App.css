@@ -12,18 +12,19 @@ li {
   list-style: none;
 }
 
-
 @media screen and (min-width:1280px){
     body{background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);}
     header{width:1920px; margin:0 auto 150px; font-family: "Jua", sans-serif; }
     header:after{content: ''; display: block; clear: both;}
-    header > span{float:left; width:15%; display:block; padding-top:20px}
-    header > span > h1{display:block; width:60%; margin:0 auto; text-align: center; cursor: pointer; color:black; font-weight: 900; font-size:35px;}
-    header > nav{float:left; width:85%; background-color: rgba(51,204,102,0.5);}
+    header > span{float:left; width:10%; display:block; padding-top:5px}
+    header > h1{float:left; width:10%; display:block; background-color: transparent; border: 2px solid #fff; color: #fff; display:block; text-align: center; cursor: pointer; font-weight: 900; font-size:35px; line-height: 50px;}
+    header > h1:hover{background-color: rgba(255, 255, 255, 0.2)}
+    header > nav{float:left; width:90%; background-color: rgba(51,204,102,0.5);}
     header > nav ul:after{content: ''; display: block; clear: both;}
     header > nav ul li{float:right; width:10%; margin-right:5%; line-height: 50px;}
-    header > nav ul li:first-of-type a{font-size:25px; font-weight: 900;}
-
+    header > nav ul li:not(:first-child) a{transition-duration: 0.3s;}
+    header > nav ul li:not(:first-child) a:hover{color:#ff3322; cursor: pointer;}
+    header > nav ul li:first-child a{font-size:25px; font-weight: 900;}
 
     .searchArea{width:1920px; margin: 0 auto;}
     .searchArea > div{width:66.66%; margin:0 auto; position:relative; font-family: "Jua", sans-serif;}
@@ -34,14 +35,16 @@ li {
 
     
     .infoArea{width:1920px; margin:0 auto 100px; position: relative;}
-    .infoArea > div{width:1280px; margin:0 auto; background-color: white; border-radius: 50px; display: flex; box-shadow: 1px 1px 10px 2px gray; padding:50px 5%; font-family: "Song Myung", serif; font-size: 16px;}
+    .infoArea > div{width:1280px; margin:0 auto; background-color: white; border-radius: 50px; display: flex; box-shadow: 1px 1px 10px 2px gray; padding:50px 5%; font-family: "Song Myung", serif; font-weight:900;}
     .infoArea > div > div{width:25%; text-align: center;}
     .infoArea > div > div img{display:block; margin:0 auto 10px;}
-    .infoArea > div > div:not(:nth-child(4)) > p{font-size:12px; font-weight: 700;}
+    .infoArea > div > div:not(:nth-child(4)) > p{font-size:12px;}
     .infoArea > div > div:not(:nth-child(4)) > p:first-of-type{margin-bottom:1px;}
     .infoArea > div > div:nth-child(4) h2{font-size: 30px; padding-top:30px; letter-spacing: -1;}
-    .infoArea > div > div:nth-child(4) p{font-size:20px; font-weight: 700; font-style: italic;}
-    .infoArea > button[type="button"]{position:absolute; top: 40%; right:19%; padding:5px 15px; border-radius: 20px; border: 1px solid black; box-sizing: border-box; cursor: pointer;}
+    .infoArea > div > div:nth-child(4) p{font-size:20px; font-style: italic;}
+    .infoArea > button[type="button"]{background-color: transparent; border: 2px solid #747474; color: #353535; line-height: 20px; position:absolute; top: 40%; right:18%; padding:5px 15px; border-radius: 20px; box-sizing: border-box; cursor: pointer; transition-duration: 0.5s;}
+    .infoArea > button[type="button"]:hover{background-color: rgba(51,204,102, 0.2); border-color: white; box-shadow:1px 1px 5px 1px gray;}
+
 
 
 
@@ -53,13 +56,13 @@ li {
         .recordArea > div:nth-child(1) > #tab3 ul:hover{padding-bottom:300px; transition-duration: 1s;}
 
 
-    .recordArea > div{width:1280px; margin: 0 auto; border-bottom: 1px solid gray; font-family: "Song Myung", serif; font-size: 16px;}
+    .recordArea > div{width:1280px; margin: 0 auto; border-bottom: 1px solid gray; font-family: "Song Myung", serif; font-weight: 600; font-size: 16px;}
     .recordArea > div:nth-child(1) > ul{width:100%;}
     .recordArea > div:nth-child(1) > ul:after{content: ''; display: block; clear: both;}
     .recordArea > div:nth-child(1) > ul li{float:left; margin-right:5%; padding:5px 0;}
     .recordArea > div:nth-child(1) > ul li a{font-weight: 700; font-size: 20px; padding:5px 0; transition-duration: 0.5s;}
-    .recordArea > div:nth-child(1) > ul li.activated a{color:white; padding:5px 0; border-bottom: 1px solid #ff3322;}
-    .recordArea > div:nth-child(1) > ul li:hover a{color:white; border-bottom: 1px solid #ff3322;}
+    .recordArea > div:nth-child(1) > ul li.activated a{color:white; padding:5px 0; border-bottom: 1px solid #fd9187;}
+    .recordArea > div:nth-child(1) > ul li:hover a{color:white; border-bottom: 1px solid #fd9187;}
 
     .recordArea > div:nth-child(1) > #tab1 ul{width:100%; background-color: white; margin:0 auto 10px; border-radius: 10px; border: 3px solid white; background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);}
     .recordArea > div:nth-child(1) > #tab1 ul::after{content: ''; display: block; clear: both;}
@@ -70,7 +73,7 @@ li {
     .recordArea > div:nth-child(1) > #tab1 ul li:nth-child(4){width:1%; background-color: #6699ff; border-radius: 0px 5px 5px 0;}
     
     /* *패배-임시css */
-    .recordArea > div:nth-child(1) > #tab1 ul:first-child li:nth-child(4){background-color: #ff3366;}
+    .recordArea > div:nth-child(1) > #tab1 ul:first-child li:nth-child(4){background-color: #ff0e0e;}
 
 
 
@@ -83,8 +86,8 @@ li {
     .recordArea > div:nth-child(1) > #tab4 article .point > div:nth-child(2),
     .recordArea > div:nth-child(1) > #tab4 article .point > div:nth-child(3){margin-bottom:20px;}
     .recordArea > div:nth-child(1) > #tab4 article .point:after{content: ''; display: block; clear: both;}
-    .recordArea > div:nth-child(1) > #tab4 article .point > div > span{display:block; text-align: center; padding:10px 0;}
-    .recordArea > div:nth-child(1) > #tab4 article .point > div > div{padding:30px 0; border-top: 1px solid #D5D5D5;}
+    .recordArea > div:nth-child(1) > #tab4 article .point > div > span{display:block; text-align: center; padding:10px 0; font-size:22px; font-weight: 700; background: linear-gradient(to right top, #861657, #ffa69e); color: transparent; -webkit-background-clip: text;}
+    .recordArea > div:nth-child(1) > #tab4 article .point > div > div{padding:30px 0; border-top: 1px solid #ffa69e;}
     .recordArea > div:nth-child(1) > #tab4 article .point > div > div > span{display:inline-flex; width:10%;}
     .recordArea > div:nth-child(1) > #tab4 article .point > div > div > span:nth-child(1){padding-left:5%;}
     .recordArea > div:nth-child(1) > #tab4 article .point > div > div .rank1{font-weight: 700; font-size:18px;}
