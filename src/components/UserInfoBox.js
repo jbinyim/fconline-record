@@ -21,6 +21,7 @@ const UserInfoBox = ({ userOuid }) => {
 
   return (
     <div>
+      <a className="Topbutton" href="#" title="top">TOP</a>
       <section className="infoArea">
         <div>
           <UserTier text="공식경기 1:1" userMaxDivision={userMaxDivision[0]} />
