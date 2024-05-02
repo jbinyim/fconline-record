@@ -18,24 +18,24 @@ const Header = () => {
   return (
     <div>
       <header>
-
-            <h1 onClick={() => navigate("/")}>FC GG.KR</h1>
-            <nav>
-              <ul>
-                <li>
-                  <a href="https://fconline.nexon.com/main/index" target="_blank">
-                    FC Online
-                  </a>
-                </li>
-                <li><a class="hovercolor">선수 검색</a></li>
-                <li>
-                  <input type="checkbox" id="toggleBtn"></input>
-                  <label for="toggleBtn" className="toggleBtn">닉네임조회</label>
-                  <input onKeyUp={enter} type="text" className="textbox"/>
-                </li>
-              </ul>
-            </nav>
-
+        <h1 onClick={() => navigate("/")}>FC GG.KR</h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="https://fconline.nexon.com/main/index" target="_blank">
+                FC Online
+              </a>
+            </li>
+            <li>
+              <a className="hovercolor">선수 검색</a>
+            </li>
+            <li>
+              <input type="checkbox" id="toggleBtn" />
+              <label className="toggleBtn">닉네임조회</label>
+              <input onKeyUp={enter} type="text" className="textbox" />
+            </li>
+          </ul>
+        </nav>
       </header>
     </div>
   );

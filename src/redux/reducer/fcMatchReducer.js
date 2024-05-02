@@ -1,5 +1,5 @@
 const initialState = {
-  userMatch: {},
+  userMatch: [],
 };
 
 const fcMatchReducer = (state = initialState, action) => {

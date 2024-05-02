@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fcMatchAction } from "../redux/action/fcMatchAction";
-const type = 50;
-const offset = 0;
+import MatchInfo from "./MatchInfo";
 
 const GameMode = ({ toggle, userOuid }) => {
-  const [match, setMatch] = useState([]);
+  let type = 50;
+  let offset = 0;
   const dispatch = useDispatch();
   const { userMatch } = useSelector((state) => state.fcMatch);
 
@@ -15,15 +15,13 @@ const GameMode = ({ toggle, userOuid }) => {
 
   useEffect(() => {
     getFcMatch();
+  }, []);
 
-    console.log(match);
-  }, [userOuid]);
-
-  if (toggle === 0) {
-  }
-  console.log(userMatch);
   return (
-    <div id="tab1" className="tabPage activated">
+    <div id={toggle} className="tabPage activated">
+      {userMatch?.map((item) => (
+        <MatchInfo item={item} />
+      ))}
       <ul>
         <li>0000.00.00 / 00시00분</li>
         <li>호날두 0 : 0 메시</li>
