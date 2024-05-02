@@ -1,10 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fcBasicAction } from "../redux/action/fcBasicAction";
+import { fcMatchAction } from "../redux/action/fcMatchAction";
 const type = 50;
 const offset = 0;
 
 const GameMode = ({ toggle, userOuid }) => {
+  const [match, setMatch] = useState([]);
+  const dispatch = useDispatch();
+  const { userMatch } = useSelector((state) => state.fcMatch);
+
+  const getFcMatch = async () => {
+    dispatch(fcMatchAction.getMatch(userOuid, type, offset));
+  };
+
+  useEffect(() => {
+    getFcMatch();
+
+    console.log(match);
+  }, [userOuid]);
+
+  if (toggle === 0) {
+  }
+  console.log(userMatch);
   return (
     <div id="tab1" className="tabPage activated">
       <ul>

@@ -18,6 +18,7 @@ const Header = () => {
   return (
     <div>
       <header>
+
             <h1 onClick={() => navigate("/")}>FC GG.KR</h1>
             <nav>
               <ul>
@@ -34,6 +35,7 @@ const Header = () => {
                 </li>
               </ul>
             </nav>
+
       </header>
     </div>
   );
