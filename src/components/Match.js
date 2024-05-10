@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import GameMode from "./GameMode";
 import AttackPoints from "./AttackPoints";
 import ModeTitle from "./ModeTitle";
+import { useDispatch, useSelector } from "react-redux";
+import { fcMatchAction } from "../redux/action/fcMatchAction";
 
 const titleMode = [
   "1:1 공식 경기",
@@ -12,7 +14,24 @@ const titleMode = [
 
 const Match = ({ userOuid }) => {
   const [toggle, setToggle] = useState(0);
-  console.log(toggle);
+  const [mathchId, setMatchId] = useState();
+  let offset = 0;
+  let type = 50;
+  const dispatch = useDispatch();
+
+  const { userMatch } = useSelector((state) => state.fcMatch);
+
+  const getFcMatch = async () => {
+    dispatch(fcMatchAction.getMatch(userOuid, type, offset));
+  };
+
+  console.log(userMatch.length);
+  useEffect(() => {
+    getFcMatch();
+    userMatch.map((item) => {
+      setMatchId(item);
+    });
+  }, [toggle, dispatch]);
   return (
     <div className="recordArea">
       <div>
@@ -31,7 +50,7 @@ const Match = ({ userOuid }) => {
         {toggle === 3 ? (
           <AttackPoints />
         ) : (
-          <GameMode toggle={toggle} userOuid={userOuid} />
+          userMatch.map((item, idx) => <GameMode key={idx} item={item} />)
         )}
       </div>
     </div>
