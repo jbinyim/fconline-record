@@ -6,7 +6,7 @@ const getMatchDetail = (matchId) => {
       dispatch({
         type: "GET_MATCHDETAIL_REQUEST",
       });
-      const userMatchDetailApi = api.get(`match-detail?matchid=${matchId}`);
+      const userMatchDetailApi = api.get(`/match-detail?matchid=${matchId}`);
 
       const [userMatchDetail] = await Promise.all([userMatchDetailApi]);
       dispatch({

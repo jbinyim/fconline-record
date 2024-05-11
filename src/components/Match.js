@@ -14,7 +14,7 @@ const titleMode = [
 
 const Match = ({ userOuid }) => {
   const [toggle, setToggle] = useState(0);
-  const [mathchId, setMatchId] = useState();
+
   let offset = 0;
   let type = 50;
   const dispatch = useDispatch();
@@ -25,13 +25,10 @@ const Match = ({ userOuid }) => {
     dispatch(fcMatchAction.getMatch(userOuid, type, offset));
   };
 
-  console.log(userMatch.length);
   useEffect(() => {
     getFcMatch();
-    userMatch.map((item) => {
-      setMatchId(item);
-    });
-  }, [toggle, dispatch]);
+  }, [toggle, userOuid]);
+  // console.log(userMatch);
   return (
     <div className="recordArea">
       <div>
