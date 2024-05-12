@@ -37,7 +37,7 @@ li{
     header > nav ul li input[type="checkbox"]:checked ~ .textbox::placeholder{font-family: "Jua", sans-serif; color:#BDBDBD; font-size:14px; border: none; padding-left:20px;}
     header > nav ul li input[type="checkbox"]:checked ~ .textbox:focus{outline:none;}
 
-    .header2{width:1920px; margin:0 auto 350px; background-color: #6699ff; font-family: "Jua", sans-serif;}
+    .header2{width:1920px; margin:0 auto 150px; background-color: #6699ff; font-family: "Jua", sans-serif;}
     .header2 > div{width:90%; margin:0 auto;}
     .header2 > div > ul{display:flex; align-items: center; justify-content:space-between;}
     .header2 > div > ul > li{color:white; font-family: inherit; cursor:pointer; line-height: 50px; transition-duration: 0.3s; padding-right:20px}
@@ -59,7 +59,7 @@ li{
 
     
     .infoArea{width:1920px; margin:0 auto 100px; position: relative;}
-    .infoArea > div{width:1280px; margin:0 auto; background-color: white; border-radius: 50px; display: flex; box-shadow: 1px 1px 10px 2px gray; padding:50px 5%; font-family: "Noto Sans KR", sans-serif; font-weight:700;}
+    .infoArea > div{width:66.66%; margin:0 auto; background-color: white; border-radius: 50px; display: flex; box-shadow: 1px 1px 10px 2px gray; padding:50px 5%; font-family: "Noto Sans KR", sans-serif; font-weight:700;}
     .infoArea > div > div{width:25%; text-align: center;}
     .infoArea > div > div img{display:block; margin:0 auto 10px;}
     .infoArea > div > div:not(:nth-child(4)) > p{font-size:14px;}
@@ -71,9 +71,27 @@ li{
 
 
 
+    .tabPage1{width:1920px; margin:0 auto; font-family: "Jua", sans-serif;}
+    .tabPage1 > ul{width:66.66%; background-color: white; display:flex; justify-content: space-between; padding:20px 0; box-shadow: 1px 1px 5px 1px gray; border-radius: 10px;}
+    .tabPage1 > ul li{}
+    .tabPage1 > ul li:nth-child(1){padding:0 10px;}
+    .tabPage1 > ul li:nth-child(3){display:none;}
+    .tabPage1 > ul li:nth-child(4){padding:0 5px; color:#5D5D5D; cursor: pointer;}
+    
+    .matchinfoArea{width:1920px; margin:0 auto;}
+    .matchinfoArea > div{width:66.66%; box-shadow: 1px 1px 10px 1px gray; border-radius: 10px;}
+    .matchinfoArea > div ul{display:flex; justify-content: space-between;}
+    .matchinfoArea > div ul li:nth-child(1){}
+    .matchinfoArea > div ul li:nth-child(3){padding:0 20px;}
+
+    .gamewin{background-color: #0054FF;}
+    .gamedraw{background-color: #BDBDBD;}
+    .gamelose{background-color: #FFA7A7;}
+
+
 
     .recordArea{width:1920px; margin:0 auto;}
-    .recordArea > div{width:1280px; margin: 0 auto; border-bottom: 1px solid gray; font-family: "Song Myung", serif; font-weight: 600; font-size: 16px;}
+    .recordArea > div{width:66.66%; margin: 0 auto; border-bottom: 1px solid gray; font-family: "Song Myung", serif; font-weight: 600; font-size: 16px;}
     .recordArea > div:nth-child(1) > ul{width:100%; margin-bottom:100px;}
     .recordArea > div:nth-child(1) > ul:after{content: ''; display: block; clear: both;}
     .recordArea > div:nth-child(1) > ul li{float:left; margin-right:5%; padding:5px 0;}
@@ -81,13 +99,13 @@ li{
     .recordArea > div:nth-child(1) > ul li.activated a{color:white; padding:5px 0; border-bottom: 1px solid #fd9187;}
     .recordArea > div:nth-child(1) > ul li:hover a{color:white; border-bottom: 1px solid #fd9187;}
 
-    .recordArea > div:nth-child(1) > #tab1 ul{width:100%; background-color: white; margin:0 auto 20px; border-radius: 10px; border: 3px solid white; background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);}
+    /* .recordArea > div:nth-child(1) > #tab1 ul{width:100%; background-color: white; margin:0 auto 20px; border-radius: 10px; border: 3px solid white; background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);}
     .recordArea > div:nth-child(1) > #tab1 ul::after{content: ''; display: block; clear: both;}
     .recordArea > div:nth-child(1) > #tab1 ul li{float:left; padding:30px 0;}
     .recordArea > div:nth-child(1) > #tab1 ul li:nth-child(1){width:15%; margin-left:4%;}
     .recordArea > div:nth-child(1) > #tab1 ul li:nth-child(2){width:70%; margin:0 auto; text-align: center;}
     .recordArea > div:nth-child(1) > #tab1 ul li:nth-child(3){width:10%;}
-    .recordArea > div:nth-child(1) > #tab1 ul li:nth-child(4){width:1%; background-color: #6699ff; border-radius: 0px 5px 5px 0;}
+    .recordArea > div:nth-child(1) > #tab1 ul li:nth-child(4){width:1%; background-color: #6699ff; border-radius: 0px 5px 5px 0;} */
     
     /* *패배-임시css */
     .recordArea > div:nth-child(1) > #tab1 ul:first-child li:nth-child(4){background-color: #ff0e0e;}
