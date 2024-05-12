@@ -13,7 +13,7 @@ const titleMode = [
 ];
 
 const Match = ({ userOuid }) => {
-  const [toggle, setToggle] = useState(0);
+  const [toggle, setToggle] = useState(50);
 
   let offset = 0;
   let type = 50;
@@ -28,7 +28,7 @@ const Match = ({ userOuid }) => {
   useEffect(() => {
     getFcMatch();
   }, [userOuid]);
-  console.log(userMatch);
+  console.log(toggle);
   return (
     <div className="recordArea">
       <div>

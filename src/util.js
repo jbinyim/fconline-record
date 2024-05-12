@@ -93,6 +93,6 @@ export const getToggle = (toggle) => {
     case 2:
       return 40;
     default:
-      return 50;
+      return 3;
   }
 };

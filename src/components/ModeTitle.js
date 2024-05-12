@@ -3,8 +3,7 @@ import { getToggle } from "../util";
 
 const ModeTitle = ({ title, idx, setToggle, isDone }) => {
   const setToggleIdx = () => {
-    console.log(idx);
-    setToggle(idx);
+    setToggle(getToggle(idx));
   };
 
   useEffect(() => {}, []);

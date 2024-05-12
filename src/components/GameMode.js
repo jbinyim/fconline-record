@@ -31,7 +31,10 @@ const GameMode = ({ userMatch }) => {
     return (
       <div onClick={info} className="tabPage activated">
         <ul>
-          <li>{userMatchDetail.matchDate} 0000.00.00 / 00시00분</li>
+          <li>
+            {userMatchDetail?.matchDate?.slice(0, 10)} /{" "}
+            {userMatchDetail?.matchDate?.slice(11, 16)}
+          </li>
           <li>
             {userMatchDetail.matchDate &&
               userMatchDetail?.matchInfo[0]?.nickname}{" "}
