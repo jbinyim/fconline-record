@@ -7,7 +7,7 @@ const getMatch = (ouid, type, offset) => {
         type: "GET_MATCH_REQUEST",
       });
       const userMatchApi = api.get(
-        `user/match?ouid=${ouid}&matchtype=${type}&offset=${offset}&limit=10`
+        `/user/match?ouid=${ouid}&matchtype=${type}&offset=${offset}&limit=1`
       );
 
       const [userMatch] = await Promise.all([userMatchApi]);

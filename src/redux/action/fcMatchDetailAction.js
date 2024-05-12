@@ -13,6 +13,7 @@ const getMatchDetail = (matchId) => {
         type: "GET_MATCHDETAIL_SUCCESS",
         payload: {
           userMatchDetail: userMatchDetail.data,
+          loading: true,
         },
       });
     } catch (error) {

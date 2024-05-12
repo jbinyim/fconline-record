@@ -27,8 +27,8 @@ const Match = ({ userOuid }) => {
 
   useEffect(() => {
     getFcMatch();
-  }, [toggle, userOuid]);
-  // console.log(userMatch);
+  }, [userOuid]);
+  console.log(userMatch);
   return (
     <div className="recordArea">
       <div>
@@ -44,11 +44,12 @@ const Match = ({ userOuid }) => {
           ))}
         </ul>
 
-        {toggle === 3 ? (
-          <AttackPoints />
-        ) : (
-          userMatch.map((item, idx) => <GameMode key={idx} item={item} />)
-        )}
+        {
+          toggle === 3 ? <AttackPoints /> : <GameMode userMatch={userMatch} />
+          // (
+          //   userMatch.map((item, idx) => <GameMode key={idx} item={item} />)
+          // )
+        }
       </div>
     </div>
   );
