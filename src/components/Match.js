@@ -22,12 +22,12 @@ const Match = ({ userOuid }) => {
   const { userMatch } = useSelector((state) => state.fcMatch);
 
   const getFcMatch = async () => {
-    dispatch(fcMatchAction.getMatch(userOuid, type, offset));
+    dispatch(fcMatchAction.getMatch(userOuid, toggle, offset));
   };
 
   useEffect(() => {
     getFcMatch();
-  }, [userOuid]);
+  }, [userOuid, toggle]);
   console.log(toggle);
   return (
     <div className="recordArea">

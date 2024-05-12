@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fcMatchDetailAction } from "../redux/action/fcMatchDetailAction";
 import MatchInfo from "./MatchInfo";
+import { Spinner } from "react-bootstrap";
 
 const GameMode = ({ userMatch }) => {
   const dispatch = useDispatch();
@@ -23,13 +24,12 @@ const GameMode = ({ userMatch }) => {
     console.log(userMatch);
     //console.log(item);
   }, [userMatch]);
-  console.log(userMatchDetail);
 
   if (loading) {
-    return <div>loading</div>;
+    return <Spinner animation="border" variant="danger" />;
   } else {
     return (
-      <div onClick={info} className="tabPage activated">
+      <div onClick={info} className="tabPage1 activated">
         <ul>
           <li>
             {userMatchDetail?.matchDate?.slice(0, 10)} /{" "}
