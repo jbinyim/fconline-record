@@ -22,6 +22,7 @@ const Maxdivision = ({ ouid }: IMaxdivision) => {
     <div>
       {data?.map((item, idx) => (
         <div key={idx}>
+          <h2>공식경기</h2>
           <img src={getDivisionImg(item.division)} alt="tier" />
           <p>{getDivision(item.division)}</p>
           <p>{item.achievementDate?.slice(0, 10)}</p>
