@@ -22,11 +22,16 @@ const UserInfo = ({ userNickname }: IUserInfoProps) => {
   if (basic) {
     return (
       <div>
-        <div>
-          <p>닉네임 : {basic?.nickname}</p>
-          <p>레벨 : {basic?.level}</p>
-        </div>
-        <Maxdivision ouid={basic.ouid} />
+        <section className="infoArea">
+          <div>
+            <div>
+              {/* <span><img src="	https://fo4.dn.nexoncdn.co.kr/live/externalAssets/common/playersAction/p807200104.png" alt="" /></span> */}
+              <p>닉네임 : {basic?.nickname}</p>
+              <p>레벨 : {basic?.level}</p>
+            </div>
+            <Maxdivision ouid={basic.ouid} />
+          </div>
+        </section>
       </div>
     );
   } else {

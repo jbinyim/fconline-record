@@ -9,12 +9,16 @@ const Info = () => {
   return (
     <div>
       <UserInfo userNickname={userNickname} />
-      <ul>
-        <li>공식경기</li>
-        <li>감독모드</li>
-        <li>친선경기</li>
-        <li>선수별 공격포인트</li>
-      </ul>
+      <section className="recordArea">
+        <div>
+          <ul>
+            <li>공식경기</li>
+            <li>감독모드</li>
+            <li>친선경기</li>
+            <li>선수별 공격포인트</li>
+          </ul>
+        </div>
+      </section>
     </div>
   );
 };
