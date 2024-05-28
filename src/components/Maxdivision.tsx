@@ -17,12 +17,12 @@ const Maxdivision = ({ ouid }: IMaxdivision) => {
   const { isLoading, data } = useQuery<Max[]>(["max", ouid], () =>
     fetchMaxdivision(ouid ?? undefined)
   );
-
+  console.log(data);
   return (
     <div>
       {data?.map((item, idx) => (
         <div key={idx}>
-          <h2>공식경기</h2>
+          <h2>{getToggle(item.matchType)}</h2>
           <img src={getDivisionImg(item.division)} alt="tier" />
           <p>{getDivision(item.division)}</p>
           <p>{item.achievementDate?.slice(0, 10)}</p>
