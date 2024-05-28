@@ -14,3 +14,19 @@ export const fetchOuid = (userName: string | undefined) => {
     },
   }).then((response) => response.json());
 };
+
+export const fetchUserBasic = (ouid: string | undefined) => {
+  return fetch(`${BASE_URL}user/basic?ouid=${ouid}`, {
+    headers: {
+      "x-nxopen-api-key": API_KEY,
+    },
+  }).then((response) => response.json());
+};
+
+export const fetchMaxdivision = (ouid: string | undefined) => {
+  return fetch(`${BASE_URL}user/maxdivision?ouid=${ouid}`, {
+    headers: {
+      "x-nxopen-api-key": API_KEY,
+    },
+  }).then((response) => response.json());
+};
