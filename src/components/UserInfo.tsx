@@ -19,15 +19,19 @@ const UserInfo = ({ userNickname }: IUserInfoProps) => {
     () => fetchUserBasic(userNickname ?? undefined)
   );
 
-  return (
-    <div>
+  if (basic) {
+    return (
       <div>
-        <p>닉네임 : {basic?.nickname}</p>
-        <p>레벨 : {basic?.level}</p>
+        <div>
+          <p>닉네임 : {basic?.nickname}</p>
+          <p>레벨 : {basic?.level}</p>
+        </div>
+        <Maxdivision ouid={basic.ouid} />
       </div>
-      <div>{basic ? <Maxdivision ouid={basic.ouid} /> : ""}</div>
-    </div>
-  );
+    );
+  } else {
+    return <h1>데이터 정보가 없습니다.</h1>;
+  }
 };
 
 export default UserInfo;
