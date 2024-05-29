@@ -5,7 +5,7 @@ const API_KEY =
 // const API_KEY =
 //   "test_53f79550489eb108211ebb3bd8e2397d5dec05d3afa4a513935d710ad677314996da7fe4649431134b060075b74d1355";
 // const API_KEY =
-  // "test_686f8c782cb0d01354eeb775b8cb14eba6fa93bb5b59e33094a93360002b4a398fa8b865f45b41e5015f882354941fdf";
+// "test_686f8c782cb0d01354eeb775b8cb14eba6fa93bb5b59e33094a93360002b4a398fa8b865f45b41e5015f882354941fdf";
 
 export const fetchOuid = (userName: string | undefined) => {
   return fetch(`${BASE_URL}id?nickname=${userName}`, {
@@ -15,7 +15,7 @@ export const fetchOuid = (userName: string | undefined) => {
   }).then((response) => response.json());
 };
 
-export const fetchUserBasic = (ouid: string | undefined) => {
+export const fetchUserBasic = (ouid: string) => {
   return fetch(`${BASE_URL}user/basic?ouid=${ouid}`, {
     headers: {
       "x-nxopen-api-key": API_KEY,
@@ -23,8 +23,27 @@ export const fetchUserBasic = (ouid: string | undefined) => {
   }).then((response) => response.json());
 };
 
-export const fetchMaxdivision = (ouid: string | undefined) => {
+export const fetchMaxdivision = (ouid: string) => {
   return fetch(`${BASE_URL}user/maxdivision?ouid=${ouid}`, {
+    headers: {
+      "x-nxopen-api-key": API_KEY,
+    },
+  }).then((response) => response.json());
+};
+
+export const fetchMatch = <T>(ouid: string, type: T, offset: T, limit: T) => {
+  return fetch(
+    `${BASE_URL}user/match?ouid=${ouid}&matchtype=${type}&offset=${offset}&limit=${limit}`,
+    {
+      headers: {
+        "x-nxopen-api-key": API_KEY,
+      },
+    }
+  ).then((response) => response.json());
+};
+
+export const fetchMatchDetail = (matchId: string) => {
+  return fetch(`${BASE_URL}match-detail?matchid=${matchId}`, {
     headers: {
       "x-nxopen-api-key": API_KEY,
     },

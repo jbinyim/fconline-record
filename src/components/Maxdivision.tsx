@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useQuery } from "react-query";
 import { fetchMaxdivision } from "../api";
 import { getDivision, getDivisionImg, getToggle } from "../util";
@@ -14,10 +14,10 @@ interface Max {
 }
 
 const Maxdivision = ({ ouid }: IMaxdivision) => {
-  const { isLoading, data } = useQuery<Max[]>(["max", ouid], () =>
+  const { data } = useQuery<Max[]>(["max", ouid], () =>
     fetchMaxdivision(ouid ?? undefined)
   );
-  console.log(data);
+
   return (
     <div>
       {data?.map((item, idx) => (

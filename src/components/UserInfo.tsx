@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useQuery } from "react-query";
 import { fetchUserBasic } from "../api";
 import Maxdivision from "./Maxdivision";
 
 interface IUserInfoProps {
-  userNickname: string | null;
+  userNickname: string;
 }
 
 interface Basic {
@@ -14,9 +14,8 @@ interface Basic {
 }
 
 const UserInfo = ({ userNickname }: IUserInfoProps) => {
-  const { isLoading: basicLoading, data: basic } = useQuery<Basic>(
-    ["basic", userNickname],
-    () => fetchUserBasic(userNickname ?? undefined)
+  const { data: basic } = useQuery<Basic>(["basic", userNickname], () =>
+    fetchUserBasic(userNickname ?? undefined)
   );
 
   if (basic) {
@@ -25,7 +24,6 @@ const UserInfo = ({ userNickname }: IUserInfoProps) => {
         <section className="infoArea">
           <div>
             <div>
-              {/* <span><img src="	https://fo4.dn.nexoncdn.co.kr/live/externalAssets/common/playersAction/p807200104.png" alt="" /></span> */}
               <p>닉네임 : {basic?.nickname}</p>
               <p>레벨 : {basic?.level}</p>
             </div>

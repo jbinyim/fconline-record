@@ -90,5 +90,7 @@ export const getToggle = (toggle: number | undefined) => {
       return "감독모드";
     case 214:
       return "볼타모드";
+    case 60:
+      return "친선경기";
   }
 };
