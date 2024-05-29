@@ -311,7 +311,9 @@ const Header = () => {
       <section className="searchArea">
         <div>
           <input onKeyUp={onSearch} type="text" />
-          <FontAwesomeIcon icon={faMagnifyingGlass} />
+          <span>
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </span>
         </div>
       </section>
     </div>

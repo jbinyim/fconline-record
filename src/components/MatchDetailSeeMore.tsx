@@ -1,7 +1,9 @@
 import React from "react";
 
 const MatchDetailSeeMore = () => {
-  return <div>MatchDetailSeeMore</div>;
+  return <div className="seemoreArea">
+    box
+  </div>;
 };
 
 export default MatchDetailSeeMore;
