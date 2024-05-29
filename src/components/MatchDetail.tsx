@@ -144,16 +144,18 @@ const MatchDetail = ({ item }: IMatchDetailProps) => {
 
   return (
     <>
-      <div style={{ width: 1280, height: "150px", border: "1px solid #000" }}>
-        <div>{data?.matchDate}</div>
-        {data?.matchInfo.map((item, idx) => (
-          <div key={idx}>
-            <p>{item.nickname}</p>
-            <p>:</p>
-            <p>{item.shoot.goalTotal}</p>
+      <div className="matchdetailArea">
+          <div>{data?.matchDate}</div>
+          <div>
+          {data?.matchInfo.map((item, idx) => (
+            <div key={idx}>
+              <p>{item.nickname}</p>
+              <p>:</p>
+              <p>{item.shoot.goalTotal}</p>
+            </div>
+            ))}
           </div>
-        ))}
-        <div onClick={seeMore}>더보기</div>
+          <div onClick={seeMore}>더보기</div>
       </div>
       {shouldRefetch ? <MatchDetailSeeMore /> : null}
     </>
