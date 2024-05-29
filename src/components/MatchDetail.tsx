@@ -124,19 +124,13 @@ interface MatchData {
 const MatchDetail = ({ item }: IMatchDetailProps) => {
   const [shouldRefetch, setShouldRefetch] = useState(false);
 
-  const { data, refetch } = useQuery<MatchData>(
-    ["matchDetail", item],
-    () => fetchMatchDetail(item),
-    {
-      enabled: false,
-    }
+  const { data, refetch } = useQuery<MatchData>(["matchDetail", item], () =>
+    fetchMatchDetail(item)
   );
 
   useEffect(() => {
     refetch();
-  }, [refetch]);
-
-  console.log(data);
+  }, [refetch, item]);
 
   const seeMore = () => {
     setShouldRefetch((prev) => !prev);
@@ -145,17 +139,21 @@ const MatchDetail = ({ item }: IMatchDetailProps) => {
   return (
     <>
       <div className="matchdetailArea">
-          <div>{data?.matchDate}</div>
+        <div>{data?.matchDate}</div>
+        <div>
           <div>
-          {data?.matchInfo.map((item, idx) => (
-            <div key={idx}>
-              <p>{item.nickname}</p>
-              <p>:</p>
-              <p>{item.shoot.goalTotal}</p>
-            </div>
-            ))}
+            <p>
+              {data?.matchInfo[0]?.nickname}{" "}
+              {data?.matchInfo[0]?.shoot.goalTotal}
+            </p>
+            <p> : </p>
+            <p>
+              {data?.matchInfo[1]?.shoot.goalTotal}{" "}
+              {data?.matchInfo[1]?.nickname}
+            </p>
           </div>
-          <div onClick={seeMore}>더보기</div>
+        </div>
+        <div onClick={seeMore}>더보기</div>
       </div>
       {shouldRefetch ? <MatchDetailSeeMore /> : null}
     </>
@@ -164,14 +162,10 @@ const MatchDetail = ({ item }: IMatchDetailProps) => {
 
 export default MatchDetail;
 
-// const item = {
-
-//   6647487ad74cd8544030895f
-//   6631fb73d9003b47859441d3
-//   6631f86678e0b967e83b87ad
-//   6631f62960403194b88d90f1
-//   6631f42e8715222f50ee34df
-//   6631f1420fa1fc039cd7ebe2
-//   6631ee6258168af8b32a3627
-//   6631ed33619a883e601be0fe
-// }
+// {data?.matchInfo.map((item, idx) => (
+//   <div key={idx}>
+//     <p>{item.nickname}</p>
+//     <p>:</p>
+//     <p>{item.shoot.goalTotal}</p>
+//   </div>
+// ))}
