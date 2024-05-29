@@ -13,7 +13,7 @@ const Header = () => {
   const [nickname, setNickname] = useState("99156cc13fbdadffb8c87df57f12f3ad");
   const navigate = useNavigate();
 
-  const { data } = useQuery<OuidInterface>(
+  const { data, refetch } = useQuery<OuidInterface>(
     ["ouid", nickname],
     () => fetchOuid(nickname ?? undefined),
     {
@@ -41,6 +41,10 @@ const Header = () => {
   const goToHome = () => {
     navigate("/");
   };
+
+  useEffect(() => {
+    refetch();
+  }, [refetch]);
 
   return (
     <div>
