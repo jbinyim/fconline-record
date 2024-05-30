@@ -57,3 +57,9 @@ export const fetchMatchDetail = (matchId: string) => {
     },
   }).then((response) => response.json());
 };
+
+export const fetchSpid = () => {
+  return fetch(
+    "https://open.api.nexon.com/static/fconline/meta/spid.json"
+  ).then((response) => response.json());
+};

@@ -15,8 +15,12 @@ interface IMatch {
 const Match = ({ matchType, userNickname }: IMatchTypeProps) => {
   let offset = 0;
   let limit = 10;
-  const { data, refetch } = useQuery<IMatch[]>(["match", "matchId"], () =>
-    fetchMatch(userNickname, matchType, offset, limit)
+  const { data, refetch } = useQuery<IMatch[]>(
+    ["match", "matchId"],
+    () => fetchMatch(userNickname, matchType, offset, limit),
+    {
+      refetchOnWindowFocus: false,
+    }
   );
 
   useEffect(() => {
