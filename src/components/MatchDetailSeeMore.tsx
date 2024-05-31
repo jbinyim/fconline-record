@@ -23,8 +23,8 @@ const MatchDetailSeeMore = ({ data }: IMatchDetailSeeMore) => {
   const goalSpId =
     spid &&
     shootSpId &&
-    shootSpId?.map((spIdArray) =>
-      spIdArray?.map((spId) => spid.find((item: any) => item.id === spId))
+    shootSpId.map((spIdArray) =>
+      spIdArray.map((spId) => spid.find((item: any) => item.id === spId))
     );
 
   console.log(goalSpId);
@@ -32,14 +32,14 @@ const MatchDetailSeeMore = ({ data }: IMatchDetailSeeMore) => {
     <div className="seemoreArea" style={{ textAlign: "center" }}>
       <div style={{ display: "flex", gap: "50px", marginBottom: "50px" }}>
         <div>
-          {goalSpId[0]?.map((id: any) => (
-            <p>{id.name}</p>
-          ))}
+          {goalSpId &&
+            goalSpId[0] &&
+            goalSpId[0].map((id: any) => <p>{id.name}</p>)}
         </div>
         <div>
-          {goalSpId[1]?.map((id: any) => (
-            <p>{id.name}</p>
-          ))}
+          {goalSpId &&
+            goalSpId[1] &&
+            goalSpId[1].map((id: any) => <p>{id.name}</p>)}
         </div>
       </div>
       <div style={{ display: "flex", gap: "50px" }}>
