@@ -29,8 +29,8 @@ const MatchDetailSeeMore = ({ data }: IMatchDetailSeeMore) => {
 
   console.log(goalSpId);
   return (
-    <div className="seemoreArea" style={{ textAlign: "center" }}>
-      <div style={{ display: "flex", gap: "50px", marginBottom: "50px" }}>
+    <div className="seemoreArea">
+      <div>
         <div>
           {goalSpId &&
             goalSpId[0] &&
@@ -42,7 +42,7 @@ const MatchDetailSeeMore = ({ data }: IMatchDetailSeeMore) => {
             goalSpId[1].map((id: any) => <p>{id.name}</p>)}
         </div>
       </div>
-      <div style={{ display: "flex", gap: "50px" }}>
+      <div>
         {data.matchInfo.map((item, idx) => (
           <>
             <div key={item.ouid}>
