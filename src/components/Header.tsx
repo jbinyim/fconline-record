@@ -287,24 +287,8 @@ const Header = () => {
                 </ul>
               </div>
             </li>
-            <li>
-              <a
-                href="https://fconline.nexon.com/datacenter/squadmaker"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                스쿼드메이커
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://fconline.nexon.com/datacenter/playergrow"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                강화부스트 도우미
-              </a>
-            </li>
+            <li>스쿼드메이커</li>
+            <li>강화부스트 도우미</li>
           </ul>
         </div>
       </section>
