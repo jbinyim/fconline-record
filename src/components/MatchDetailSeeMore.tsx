@@ -26,20 +26,19 @@ const MatchDetailSeeMore = ({ data }: IMatchDetailSeeMore) => {
     shootSpId.map((spIdArray) =>
       spIdArray.map((spId) => spid.find((item: any) => item.id === spId))
     );
-
-  console.log(goalSpId);
+  console.log(data);
   return (
     <div className="seemoreArea">
       <div>
         <div>
           {goalSpId &&
             goalSpId[0] &&
-            goalSpId[0].map((id: any) => <p>{id.name}</p>)}
+            goalSpId[0].map((id: any) => <p key={id.id}>{id.name}</p>)}
         </div>
         <div>
           {goalSpId &&
             goalSpId[1] &&
-            goalSpId[1].map((id: any) => <p>{id.name}</p>)}
+            goalSpId[1].map((id: any) => <p key={id.id}>{id.name}</p>)}
         </div>
       </div>
       <div>
@@ -74,19 +73,6 @@ const MatchDetailSeeMore = ({ data }: IMatchDetailSeeMore) => {
           </>
         ))}
       </div>
-      {/* <div>
-        <p>{data.matchInfo[1].nickname}</p>
-        <p>{data.matchInfo[1].shoot.shootTotal}</p>
-        <p>{data.matchInfo[1].shoot.effectiveShootTotal}</p>
-        <p>{data.matchInfo[1].matchDetail.possession}%</p>
-        <p>{data.matchInfo[1].pass.passTry}</p>
-        <p>{data.matchInfo[1].pass.passSuccess}</p>
-        <p>{data.matchInfo[1].matchDetail.foul}</p>
-        <p>{data.matchInfo[1].matchDetail.yellowCards}</p>
-        <p>{data.matchInfo[1].matchDetail.redCards}</p>
-        <p>{data.matchInfo[1].matchDetail.OffsideCount ?? 0}</p>
-        <p>{data.matchInfo[1].matchDetail.cornerKick}</p>
-      </div> */}
     </div>
   );
 };
