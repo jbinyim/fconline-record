@@ -40,32 +40,37 @@ const MatchDetail = ({ item }: IMatchDetailProps) => {
     setShouldRefetch((prev) => !prev);
   };
 
-  return (
-    <>
-      <div className="matchdetailArea">
-        {data && (
-          <>
-            <div>{getFormatDate(data.matchDate)}</div>
-            <div>
+  console.log(data);
+  if (isLoading) {
+    return <h1>Loading</h1>;
+  } else {
+    return (
+      <>
+        <div className="matchdetailArea">
+          {data && (
+            <>
+              <div>{getFormatDate(data.matchDate)}</div>
               <div>
-                <p>
-                  {data.matchInfo[0]?.nickname}{" "}
-                  {data.matchInfo[0]?.shoot.goalTotal}{" "}
-                </p>
-                <p> : </p>{" "}
-                <p>
-                  {data.matchInfo[1]?.shoot.goalTotal}{" "}
-                  {data.matchInfo[1]?.nickname}
-                </p>
+                <div>
+                  <p>
+                    {data.matchInfo[0]?.nickname}{" "}
+                    {data.matchInfo[0]?.shoot.goalTotal}{" "}
+                  </p>
+                  <p> : </p>{" "}
+                  <p>
+                    {data.matchInfo[1]?.shoot.goalTotal}{" "}
+                    {data.matchInfo[1]?.nickname}
+                  </p>
+                </div>
               </div>
-            </div>
-            <div onClick={seeMore}>더보기</div>
-          </>
-        )}
-      </div>
-      {shouldRefetch && data ? <MatchDetailSeeMore data={data} /> : null}
-    </>
-  );
+              <div onClick={seeMore}>더보기</div>
+            </>
+          )}
+        </div>
+        {shouldRefetch && data ? <MatchDetailSeeMore data={data} /> : null}
+      </>
+    );
+  }
 };
 
 export default MatchDetail;

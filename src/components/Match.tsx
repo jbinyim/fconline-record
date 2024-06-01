@@ -37,10 +37,22 @@ const Match = ({ matchType, userNickname }: IMatchTypeProps) => {
     );
   }
   if (matchType === 52) {
-    return <div>{matchType}</div>;
+    return (
+      <div>
+        {data?.map((item, idx) => (
+          <MatchDetail key={idx} item={item + ""} />
+        ))}
+      </div>
+    );
   }
   if (matchType === 60) {
-    return <div>{matchType}</div>;
+    return (
+      <div>
+        {data?.map((item, idx) => (
+          <MatchDetail key={idx} item={item + ""} />
+        ))}
+      </div>
+    );
   }
   if (matchType === 0) {
     return <div>{matchType}</div>;

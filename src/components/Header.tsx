@@ -18,6 +18,7 @@ const Header = () => {
     () => fetchOuid(nickname ?? undefined),
     {
       enabled: !!nickname,
+      refetchOnWindowFocus: false,
     }
   );
 
@@ -29,6 +30,10 @@ const Header = () => {
       setNickname(e.target.value);
       e.target.value = "";
     }
+  };
+
+  const handleOpenNewTab = (url: string) => {
+    window.open(url, "_blank", "noopener, noreferrer");
   };
 
   useEffect(() => {
@@ -72,7 +77,11 @@ const Header = () => {
       <section className="header2">
         <div>
           <ul>
-            <li>
+            <li
+              onClick={() =>
+                handleOpenNewTab("https://fconline.nexon.com/news/notice/list")
+              }
+            >
               공지사항
               <div className="subMenu">
                 <ul>
@@ -124,7 +133,13 @@ const Header = () => {
                 </ul>
               </div>
             </li>
-            <li>
+            <li
+              onClick={() =>
+                handleOpenNewTab(
+                  "https://fconline.nexon.com/community/recommend"
+                )
+              }
+            >
               커뮤니티
               <div className="subMenu">
                 <ul>
@@ -167,7 +182,11 @@ const Header = () => {
                 </ul>
               </div>
             </li>
-            <li>
+            <li
+              onClick={() =>
+                handleOpenNewTab("https://fconline.nexon.com/club/list")
+              }
+            >
               클럽
               <div className="subMenu">
                 <ul>
@@ -210,7 +229,11 @@ const Header = () => {
                 </ul>
               </div>
             </li>
-            <li>
+            <li
+              onClick={() =>
+                handleOpenNewTab("https://shop.fconline.nexon.com/")
+              }
+            >
               웹 상점
               <div className="subMenu">
                 <ul>
@@ -253,7 +276,13 @@ const Header = () => {
                 </ul>
               </div>
             </li>
-            <li>
+            <li
+              onClick={() =>
+                handleOpenNewTab(
+                  "https://fconline.nexon.com/datacenter/dailysquad"
+                )
+              }
+            >
               랭킹
               <div className="subMenu">
                 <ul>
@@ -287,8 +316,24 @@ const Header = () => {
                 </ul>
               </div>
             </li>
-            <li>스쿼드메이커</li>
-            <li>강화부스트 도우미</li>
+            <li
+              onClick={() =>
+                handleOpenNewTab(
+                  "https://fconline.nexon.com/datacenter/squadmaker"
+                )
+              }
+            >
+              스쿼드메이커
+            </li>
+            <li
+              onClick={() =>
+                handleOpenNewTab(
+                  "https://fconline.nexon.com/datacenter/playergrow"
+                )
+              }
+            >
+              강화부스트 도우미
+            </li>
           </ul>
         </div>
       </section>
