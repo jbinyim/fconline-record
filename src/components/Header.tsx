@@ -27,8 +27,12 @@ const Header = () => {
       React.ChangeEvent<HTMLInputElement>
   ) => {
     if (e.key === "Enter") {
-      setNickname(e.target.value);
-      e.target.value = "";
+      if (e.target.value === "") {
+        alert("구단주명을 입력해주세요!!");
+      } else {
+        setNickname(e.target.value);
+        e.target.value = "";
+      }
     }
   };
 
