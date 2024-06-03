@@ -343,7 +343,7 @@ const Header = () => {
             >
               강화부스트 도우미
             </li>
-            <li style={{ display: "none" }} onClick={onClickToggle}>
+            <li onClick={onClickToggle} className="toggle">
               <FontAwesomeIcon icon={faBars} />
             </li>
           </ul>
