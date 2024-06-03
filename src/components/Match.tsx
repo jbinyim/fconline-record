@@ -54,9 +54,10 @@ const Match = ({ matchType, userNickname }: IMatchTypeProps) => {
       </div>
     );
   }
-  if (matchType === 0) {
-    return <div>{matchType}</div>;
-  } else {
+  // if (matchType === 0) {
+  //   return <div>{matchType}</div>;
+  // }
+  else {
     return <div>매치타입이 없습니다</div>;
   }
 };

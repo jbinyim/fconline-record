@@ -7,10 +7,19 @@ interface IMatchDetailSeeMore {
   data: MatchData;
 }
 
+interface ISpId {
+  id: number;
+  name: string;
+}
+
 const MatchDetailSeeMore = ({ data }: IMatchDetailSeeMore) => {
-  const { data: spid, refetch } = useQuery<any>(["spid"], () => fetchSpid(), {
-    refetchOnWindowFocus: false,
-  });
+  const { data: spid, refetch } = useQuery<ISpId[]>(
+    ["spid"],
+    () => fetchSpid(),
+    {
+      refetchOnWindowFocus: false,
+    }
+  );
 
   useEffect(() => {
     refetch();
@@ -24,21 +33,23 @@ const MatchDetailSeeMore = ({ data }: IMatchDetailSeeMore) => {
     spid &&
     shootSpId &&
     shootSpId.map((spIdArray) =>
-      spIdArray.map((spId) => spid.find((item: any) => item.id === spId))
+      spIdArray.map((spId) => spid.find((item) => item.id === spId))
     );
+
   console.log(data);
+  // console.log(goaltime.map((item) => item.map((it) => it.goalTime)));
   return (
     <div className="seemoreArea">
       <div>
         <div>
           {goalSpId &&
             goalSpId[0] &&
-            goalSpId[0].map((id: any) => <p key={id.id}>{id.name}</p>)}
+            goalSpId[0].map((id) => <p key={id?.id}>{id?.name}</p>)}
         </div>
         <div>
           {goalSpId &&
             goalSpId[1] &&
-            goalSpId[1].map((id: any) => <p key={id.id}>{id.name}</p>)}
+            goalSpId[1].map((id) => <p key={id?.id}>{id?.name}</p>)}
         </div>
       </div>
       <div>

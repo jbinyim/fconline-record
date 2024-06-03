@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import UserInfo from "../components/UserInfo";
 import Match from "../components/Match";
@@ -12,6 +12,8 @@ const Info = () => {
     setMatchType(type);
   };
 
+  useEffect(() => {}, [matchType]);
+
   if (userNickname) {
     return (
       <div>
@@ -19,10 +21,38 @@ const Info = () => {
         <section className="recordArea">
           <div>
             <ul>
-              <li onClick={() => matchBox(50)}>공식경기</li>
-              <li onClick={() => matchBox(52)}>감독모드</li>
-              <li onClick={() => matchBox(60)}>친선경기</li>
-              <li onClick={() => matchBox(0)}>선수별 공격포인트</li>
+              <li
+                style={
+                  matchType === 50 ? { color: "#29d9be" } : { color: "#000" }
+                }
+                onClick={() => matchBox(50)}
+              >
+                공식경기
+              </li>
+              <li
+                style={
+                  matchType === 52 ? { color: "#29d9be" } : { color: "#000" }
+                }
+                onClick={() => matchBox(52)}
+              >
+                감독모드
+              </li>
+              <li
+                style={
+                  matchType === 60 ? { color: "#29d9be" } : { color: "#000" }
+                }
+                onClick={() => matchBox(60)}
+              >
+                친선경기
+              </li>
+              {/* <li
+                style={
+                  matchType === 0 ? { color: "#29d9be" } : { color: "#000" }
+                }
+                onClick={() => matchBox(0)}
+              >
+                선수별 공격포인트
+              </li> */}
             </ul>
           </div>
           <Match matchType={matchType} userNickname={userNickname} />

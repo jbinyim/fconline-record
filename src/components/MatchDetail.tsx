@@ -40,26 +40,25 @@ const MatchDetail = ({ item }: IMatchDetailProps) => {
     setShouldRefetch((prev) => !prev);
   };
 
-  console.log(data);
   if (isLoading) {
     return <h1>Loading</h1>;
   } else {
     return (
       <>
         <div className="matchdetailArea">
-          {data && (
+          {data && data.matchInfo && data.matchInfo.length > 0 && (
             <>
-              <div>{getFormatDate(data.matchDate)}</div>
+              <div>{getFormatDate(data?.matchDate)}</div>
               <div>
                 <div>
                   <p>
-                    {data.matchInfo[0]?.nickname}{" "}
-                    {data.matchInfo[0]?.shoot.goalTotal}{" "}
+                    {data?.matchInfo[0]?.nickname}{" "}
+                    {data?.matchInfo[0]?.shoot.goalTotal}{" "}
                   </p>
                   <p> : </p>{" "}
                   <p>
-                    {data.matchInfo[1]?.shoot.goalTotal}{" "}
-                    {data.matchInfo[1]?.nickname}
+                    {data?.matchInfo[1]?.shoot.goalTotal}{" "}
+                    {data?.matchInfo[1]?.nickname}
                   </p>
                 </div>
               </div>
