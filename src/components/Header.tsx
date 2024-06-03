@@ -3,13 +3,14 @@ import { useNavigate } from "react-router-dom";
 import { useQuery } from "react-query";
 import { fetchOuid } from "../api";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 interface OuidInterface {
   ouid: string;
 }
 
 const Header = () => {
+  const [toggleBtn, setToggleBtn] = useState(false);
   const [nickname, setNickname] = useState("99156cc13fbdadffb8c87df57f12f3ad");
   const navigate = useNavigate();
 
@@ -49,6 +50,10 @@ const Header = () => {
 
   const goToHome = () => {
     navigate("/");
+  };
+
+  const onClickToggle = () => {
+    setToggleBtn((prev) => !prev);
   };
 
   useEffect(() => {
@@ -338,6 +343,9 @@ const Header = () => {
             >
               강화부스트 도우미
             </li>
+            <li style={{ display: "none" }} onClick={onClickToggle}>
+              <FontAwesomeIcon icon={faBars} />
+            </li>
           </ul>
         </div>
       </section>
@@ -349,6 +357,19 @@ const Header = () => {
           </span>
         </div>
       </section>
+      {toggleBtn ? (
+        <div>
+          <ul>
+            <li>공지사항</li>
+            <li>커뮤니티</li>
+            <li>클럽</li>
+            <li>웹상점</li>
+            <li>랭킹</li>
+            <li>스쿼드메이커</li>
+            <li>강화부스트 도우미</li>
+          </ul>
+        </div>
+      ) : null}
     </div>
   );
 };
