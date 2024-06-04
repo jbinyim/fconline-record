@@ -358,7 +358,7 @@ const Header = () => {
         </div>
       </section>
       {toggleBtn ? (
-        <div>
+        <div className="toggleSlider">
           <ul>
             <li>공지사항</li>
             <li>커뮤니티</li>

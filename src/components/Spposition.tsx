@@ -25,7 +25,7 @@ const Spposition = ({ item }: ISpposition) => {
     refetch();
   }, [refetch]);
   return (
-    <div style={{ height: "100%" }}>
+    <section style={{ height: "100%" }} className="seemorePosition">
       {players01.map((player) => (
         <div className={player.spPosition + ""} key={player.spId}>
           <img
@@ -45,7 +45,7 @@ const Spposition = ({ item }: ISpposition) => {
           <p>{player.spId}</p>
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 
