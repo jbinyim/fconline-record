@@ -54,6 +54,8 @@ const MatchDetailSeeMore = ({ data }: IMatchDetailSeeMore) => {
                 goalSpId[1].map((id) => <p key={id?.name}>{id?.name}</p>)}
             </div>
           </div>
+          <p> </p>
+
           <div>
             {data.matchInfo.map((item, idx) => (
               <>
