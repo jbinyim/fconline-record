@@ -1,5 +1,7 @@
-import React from "react";
-import { MatchData } from "../util";
+import React, { useEffect } from "react";
+import { MatchData, ISpId } from "../util";
+import { fetchSpid } from "../api";
+import { useQuery } from "react-query";
 
 interface ISpposition {
   item: MatchData;
@@ -13,16 +15,36 @@ interface IPlater {
 
 const Spposition = ({ item }: ISpposition) => {
   const players01 = item.matchInfo[0].player.map((data: IPlater) => data);
-  console.log(players01);
+  const players02 = item.matchInfo[1].player.map((data: IPlater) => data);
+
+  const { data, refetch } = useQuery<ISpId[]>(["spid"], () => fetchSpid(), {
+    refetchOnWindowFocus: false,
+  });
+
+  useEffect(() => {
+    refetch();
+  }, [refetch]);
   return (
-    <div style={{ height: "100px" }}>
-      <div>
-        {players01.map((player) => (
-          <div key={player.spId}>
-            <p>{player.spId}</p>
-          </div>
-        ))}
-      </div>
+    <div style={{ height: "100%" }}>
+      {players01.map((player) => (
+        <div className={player.spPosition + ""} key={player.spId}>
+          <img
+            src={`https://fco.dn.nexoncdn.co.kr/live/externalAssets/common/playersAction/p${player.spId}.png`}
+            alt="playerImg"
+          />
+          {/* <p>{data && data.find((it) => it.id === player.spId).name}</p> */}
+        </div>
+      ))}
+
+      {players02.map((player) => (
+        <div className={player.spPosition + "02"} key={player.spId}>
+          <img
+            src={`https://fco.dn.nexoncdn.co.kr/live/externalAssets/common/playersAction/p${player.spId}.png`}
+            alt="playerImg"
+          />
+          <p>{player.spId}</p>
+        </div>
+      ))}
     </div>
   );
 };

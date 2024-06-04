@@ -208,3 +208,8 @@ export interface MatchData {
   matchType: number;
   matchInfo: MatchDetails[];
 }
+
+export interface ISpId {
+  id: number;
+  name: string;
+}

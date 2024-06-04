@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { MatchData } from "../util";
+import { MatchData, ISpId } from "../util";
 import { useQuery } from "react-query";
 import { fetchSpid } from "../api";
 import Spposition from "./Spposition";
 
 interface IMatchDetailSeeMore {
   data: MatchData;
-}
-
-interface ISpId {
-  id: number;
-  name: string;
 }
 
 const MatchDetailSeeMore = ({ data }: IMatchDetailSeeMore) => {
