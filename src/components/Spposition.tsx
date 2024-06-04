@@ -32,7 +32,11 @@ const Spposition = ({ item }: ISpposition) => {
             src={`https://fco.dn.nexoncdn.co.kr/live/externalAssets/common/playersAction/p${player.spId}.png`}
             alt="playerImg"
           />
-          { <p>{data && data?.find((it:ISpId) => it.id === player.spId)?.name}</p> }
+          {
+            <p>
+              {data && data?.find((it: ISpId) => it.id === player.spId)?.name}
+            </p>
+          }
         </div>
       ))}
 
@@ -42,7 +46,11 @@ const Spposition = ({ item }: ISpposition) => {
             src={`https://fco.dn.nexoncdn.co.kr/live/externalAssets/common/playersAction/p${player.spId}.png`}
             alt="playerImg"
           />
-          <p>{player.spId}</p>
+          {
+            <p>
+              {data && data?.find((it: ISpId) => it.id === player.spId)?.name}
+            </p>
+          }
         </div>
       ))}
     </section>
