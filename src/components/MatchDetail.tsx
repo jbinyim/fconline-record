@@ -50,13 +50,6 @@ const MatchDetail = ({ item }: IMatchDetailProps) => {
   } else {
     return (
       <>
-        {data?.matchInfo[0].ouid === userOuid ||
-        data?.matchInfo[1].ouid === userOuid
-          ? (data?.matchInfo[0].ouid === userOuid &&
-              data?.matchInfo[0].matchDetail.matchResult) ||
-            (data?.matchInfo[1].ouid === userOuid &&
-              data?.matchInfo[1].matchDetail.matchResult)
-          : null}
         <div
           className={`matchdetailArea ${
             data?.matchInfo[0].ouid === userOuid ||
