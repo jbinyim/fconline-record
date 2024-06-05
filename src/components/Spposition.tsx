@@ -28,7 +28,7 @@ const Spposition = ({ item }: ISpposition) => {
     return (
       <section style={{ height: "100%" }} className="seemorePosition">
         {players01?.map((player) => (
-          <div className={player.spPosition + ""} key={player.spId}>
+          <div className={"po" + player.spPosition} key={player.spId}>
             <img
               src={`https://fco.dn.nexoncdn.co.kr/live/externalAssets/common/playersAction/p${player.spId}.png`}
               alt="playerImg"
@@ -42,7 +42,7 @@ const Spposition = ({ item }: ISpposition) => {
         ))}
 
         {players02?.map((player) => (
-          <div className={player.spPosition + "02"} key={player.spId}>
+          <div className={"po02" + player.spPosition} key={player.spId}>
             <img
               src={`https://fco.dn.nexoncdn.co.kr/live/externalAssets/common/playersAction/p${player.spId}.png`}
               alt="playerImg"
