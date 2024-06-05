@@ -45,14 +45,6 @@ const Info = () => {
               >
                 친선경기
               </li>
-              {/* <li
-                style={
-                  matchType === 0 ? { color: "#29d9be" } : { color: "#000" }
-                }
-                onClick={() => matchBox(0)}
-              >
-                선수별 공격포인트
-              </li> */}
             </ul>
           </div>
           <Match matchType={matchType} userNickname={userNickname} />

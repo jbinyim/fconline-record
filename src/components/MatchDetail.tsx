@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useQuery } from "react-query";
+import { useSearchParams } from "react-router-dom";
 import { fetchMatchDetail } from "../api";
 import { MatchData } from "../util";
 import MatchDetailSeeMore from "./MatchDetailSeeMore";
+import Spinner from "react-bootstrap/Spinner";
 
 interface IMatchDetailProps {
   item: string;
@@ -10,6 +12,8 @@ interface IMatchDetailProps {
 
 const MatchDetail = ({ item }: IMatchDetailProps) => {
   const [shouldRefetch, setShouldRefetch] = useState(false);
+  const [ouid] = useSearchParams();
+  const userOuid = ouid.get("q");
 
   const { isLoading, data, refetch } = useQuery<MatchData>(
     ["matchDetail", item],
@@ -39,13 +43,31 @@ const MatchDetail = ({ item }: IMatchDetailProps) => {
   const seeMore = () => {
     setShouldRefetch((prev) => !prev);
   };
+  console.log(userOuid);
 
   if (isLoading) {
-    return <h1>Loading</h1>;
+    return <Spinner animation="border" variant="success" />;
   } else {
     return (
       <>
-        <div className="matchdetailArea">
+        {data?.matchInfo[0].ouid === userOuid ||
+        data?.matchInfo[1].ouid === userOuid
+          ? (data?.matchInfo[0].ouid === userOuid &&
+              data?.matchInfo[0].matchDetail.matchResult) ||
+            (data?.matchInfo[1].ouid === userOuid &&
+              data?.matchInfo[1].matchDetail.matchResult)
+          : null}
+        <div
+          className={`matchdetailArea ${
+            data?.matchInfo[0].ouid === userOuid ||
+            data?.matchInfo[1].ouid === userOuid
+              ? (data?.matchInfo[0].ouid === userOuid &&
+                  data?.matchInfo[0].matchDetail.matchResult) ||
+                (data?.matchInfo[1].ouid === userOuid &&
+                  data?.matchInfo[1].matchDetail.matchResult)
+              : null
+          }`}
+        >
           {data && data.matchInfo && data.matchInfo.length > 0 && (
             <>
               <div>{getFormatDate(data?.matchDate)}</div>

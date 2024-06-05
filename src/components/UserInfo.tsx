@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery } from "react-query";
 import { fetchUserBasic } from "../api";
 import Maxdivision from "./Maxdivision";
+import Spinner from "react-bootstrap/Spinner";
 
 interface IUserInfoProps {
   userNickname: string;
@@ -33,7 +34,7 @@ const UserInfo = ({ userNickname }: IUserInfoProps) => {
       </div>
     );
   } else {
-    return <h1>데이터 정보가 없습니다.</h1>;
+    return <Spinner animation="border" variant="success" />;
   }
 };
 

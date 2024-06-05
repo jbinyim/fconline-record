@@ -15,38 +15,6 @@ const Home = () => {
                 <span>2024.05.28</span>
               </div>
             </li>
-            <li>
-              <div>
-                <p>2. 공지사항 내용</p>
-              </div>
-              <div>
-                <span>2024.05.28</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <p>3. 공지사항 내용</p>
-              </div>
-              <div>
-                <span>2024.05.28</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <p>4. 공지사항 내용</p>
-              </div>
-              <div>
-                <span>2024.05.28</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <p>5. 공지사항 내용</p>
-              </div>
-              <div>
-                <span>2024.05.28</span>
-              </div>
-            </li>
           </ul>
         </div>
       </section>
