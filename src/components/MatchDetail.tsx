@@ -43,7 +43,6 @@ const MatchDetail = ({ item }: IMatchDetailProps) => {
   const seeMore = () => {
     setShouldRefetch((prev) => !prev);
   };
-  console.log(userOuid);
 
   if (isLoading) {
     return <Spinner animation="border" variant="success" />;

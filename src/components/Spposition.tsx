@@ -21,12 +21,15 @@ const Spposition = ({ item }: ISpposition) => {
     refetchOnWindowFocus: false,
   });
 
+  console.log(players01);
+
   useEffect(() => {
     refetch();
   }, [refetch]);
   if (item && data) {
     return (
       <section style={{ height: "100%" }} className="seemorePosition">
+        <p>{item.matchInfo[0].nickname}</p>
         {players01?.map((player) => (
           <div className={"po" + player.spPosition} key={player.spId}>
             <img
@@ -40,7 +43,7 @@ const Spposition = ({ item }: ISpposition) => {
             }
           </div>
         ))}
-
+        <p>{item.matchInfo[1].nickname}</p>
         {players02?.map((player) => (
           <div className={"po02" + player.spPosition} key={player.spId}>
             <img

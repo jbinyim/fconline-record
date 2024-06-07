@@ -39,8 +39,10 @@ const MatchDetailSeeMore = ({ data }: IMatchDetailSeeMore) => {
 
   return (
     <div className="seemoreArea">
-      <button onClick={onClickSubBtn}>{subBtn ? "라인업" : "경기 기록"}</button>
+      <button onClick={onClickSubBtn}>{subBtn ? "경기 기록" : "라인업"}</button>
       {subBtn ? (
+        <Spposition item={data} />
+      ) : (
         <>
           <div>
             <div>
@@ -48,14 +50,17 @@ const MatchDetailSeeMore = ({ data }: IMatchDetailSeeMore) => {
                 goalSpId[0] &&
                 goalSpId[0].map((id) => <p key={id?.id}>{id?.name}</p>)}
             </div>
+            <img
+              src="https://ssl.gstatic.com/onebox/sports/game_feed/goal_icon.svg"
+              alt="ball"
+            />
             <div>
               {goalSpId &&
                 goalSpId[1] &&
                 goalSpId[1].map((id) => <p key={id?.name}>{id?.name}</p>)}
             </div>
           </div>
-          <p> </p>
-
+          <p></p>
           <div>
             {data.matchInfo.map((item, idx) => (
               <>
@@ -89,8 +94,6 @@ const MatchDetailSeeMore = ({ data }: IMatchDetailSeeMore) => {
             ))}
           </div>
         </>
-      ) : (
-        <Spposition item={data} />
       )}
     </div>
   );
