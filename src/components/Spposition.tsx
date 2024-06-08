@@ -28,36 +28,38 @@ const Spposition = ({ item }: ISpposition) => {
   }, [refetch]);
   if (item && data) {
     return (
-      <section style={{ height: "100%" }} className="seemorePosition">
-        <p>{item.matchInfo[0].nickname}</p>
-        {players01?.map((player) => (
-          <div className={"po" + player.spPosition} key={player.spId}>
-            <img
-              src={`https://fco.dn.nexoncdn.co.kr/live/externalAssets/common/playersAction/p${player.spId}.png`}
-              alt="playerImg"
-            />
-            {
-              <p>
-                {data && data?.find((it: ISpId) => it.id === player.spId)?.name}
-              </p>
-            }
-          </div>
-        ))}
-        <p>{item.matchInfo[1].nickname}</p>
-        {players02?.map((player) => (
-          <div className={"po02" + player.spPosition} key={player.spId}>
-            <img
-              src={`https://fco.dn.nexoncdn.co.kr/live/externalAssets/common/playersAction/p${player.spId}.png`}
-              alt="playerImg"
-            />
-            {
-              <p>
-                {data && data?.find((it: ISpId) => it.id === player.spId)?.name}
-              </p>
-            }
-          </div>
-        ))}
-      </section>
+      <div>
+        <section style={{ height: "100%" }} className="seemorePosition">
+          <p className="nick1">{item.matchInfo[0].nickname}</p>
+          {players01?.map((player) => (
+            <div className={"po" + player.spPosition} key={player.spId}>
+              <img
+                src={`https://fco.dn.nexoncdn.co.kr/live/externalAssets/common/playersAction/p${player.spId}.png`}
+                alt="playerImg"
+              />
+              {
+                <p>
+                  {data && data?.find((it: ISpId) => it.id === player.spId)?.name}
+                </p>
+              }
+            </div>
+          ))}
+          <p className="nick2">{item.matchInfo[1].nickname}</p>
+          {players02?.map((player) => (
+            <div className={"po02" + player.spPosition} key={player.spId}>
+              <img
+                src={`https://fco.dn.nexoncdn.co.kr/live/externalAssets/common/playersAction/p${player.spId}.png`}
+                alt="playerImg"
+              />
+              {
+                <p>
+                  {data && data?.find((it: ISpId) => it.id === player.spId)?.name}
+                </p>
+              }
+            </div>
+          ))}
+        </section>
+      </div>
     );
   } else {
     return null;
