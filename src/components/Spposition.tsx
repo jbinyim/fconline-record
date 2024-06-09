@@ -21,8 +21,6 @@ const Spposition = ({ item }: ISpposition) => {
     refetchOnWindowFocus: false,
   });
 
-  console.log(players01);
-
   useEffect(() => {
     refetch();
   }, [refetch]);
@@ -39,7 +37,8 @@ const Spposition = ({ item }: ISpposition) => {
               />
               {
                 <p>
-                  {data && data?.find((it: ISpId) => it.id === player.spId)?.name}
+                  {data &&
+                    data?.find((it: ISpId) => it.id === player.spId)?.name}
                 </p>
               }
             </div>
@@ -53,7 +52,8 @@ const Spposition = ({ item }: ISpposition) => {
               />
               {
                 <p>
-                  {data && data?.find((it: ISpId) => it.id === player.spId)?.name}
+                  {data &&
+                    data?.find((it: ISpId) => it.id === player.spId)?.name}
                 </p>
               }
             </div>

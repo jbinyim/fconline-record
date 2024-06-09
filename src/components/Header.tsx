@@ -63,7 +63,7 @@ const Header = () => {
   return (
     <div>
       <header>
-        <h1 onClick={goToHome}>FC GG.KR</h1>
+        <h1 onClick={goToHome}>피파전적.com</h1>
         <nav>
           <ul>
             <li>

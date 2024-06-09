@@ -9,10 +9,10 @@ const Home = () => {
           <ul>
             <li>
               <div>
-                <p>1. 공지사항 내용</p>
+                <p>1. 2024.06.09 첫 서비스 시작.</p>
               </div>
               <div>
-                <span>2024.05.28</span>
+                <span>2024.06.09</span>
               </div>
             </li>
           </ul>
