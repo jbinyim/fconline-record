@@ -10,6 +10,7 @@ interface OuidInterface {
 }
 
 const Header = () => {
+  const [searchText, setSearchText] = useState("");
   const [toggleBtn, setToggleBtn] = useState(false);
   const [nickname, setNickname] = useState("99156cc13fbdadffb8c87df57f12f3ad");
   const navigate = useNavigate();
@@ -23,6 +24,10 @@ const Header = () => {
     }
   );
 
+  const onChSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchText(e.target.value);
+  };
+
   const onSearch = (
     e: React.KeyboardEvent<HTMLInputElement> &
       React.ChangeEvent<HTMLInputElement>
@@ -35,6 +40,11 @@ const Header = () => {
         e.target.value = "";
       }
     }
+  };
+
+  const onClickSearch = () => {
+    setNickname(searchText);
+    setSearchText("");
   };
 
   const handleOpenNewTab = (url: string) => {
@@ -351,8 +361,13 @@ const Header = () => {
       </section>
       <section className="searchArea">
         <div>
-          <input onKeyUp={onSearch} type="text" />
-          <span>
+          <input
+            value={searchText}
+            onChange={onChSearch}
+            onKeyUp={onSearch}
+            type="text"
+          />
+          <span onClick={onClickSearch}>
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </span>
         </div>

@@ -34,6 +34,7 @@ const Spposition = ({ item }: ISpposition) => {
               <img
                 src={`https://fco.dn.nexoncdn.co.kr/live/externalAssets/common/playersAction/p${player.spId}.png`}
                 alt="playerImg"
+                loading="lazy"
               />
               {
                 <p>
@@ -49,6 +50,7 @@ const Spposition = ({ item }: ISpposition) => {
               <img
                 src={`https://fco.dn.nexoncdn.co.kr/live/externalAssets/common/playersAction/p${player.spId}.png`}
                 alt="playerImg"
+                loading="lazy"
               />
               {
                 <p>
