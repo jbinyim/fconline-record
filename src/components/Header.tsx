@@ -106,45 +106,45 @@ const Header = () => {
                 <ul>
                   <li>
                     <a
-                      href="https://fconline.nexon.com/news/notice/list"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      onClick={() =>
+                        handleOpenNewTab("https://fconline.nexon.com/news/notice/list")
+                      }
                     >
                       공지사항
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://fconline.nexon.com/news/play/list"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      onClick={() =>
+                        handleOpenNewTab("https://fconline.nexon.com/news/play/list")
+                      }
                     >
                       개발자 노트
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://fconline.nexon.com/news/nf/list"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      onClick={() =>
+                        handleOpenNewTab("https://fconline.nexon.com/news/nf/list")
+                      }
                     >
                       넥스트 필드
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://fconline.nexon.com/news/update/list"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      onClick={() =>
+                        handleOpenNewTab("https://fconline.nexon.com/news/update/list")
+                      }
                     >
                       업데이트
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://fconline.nexon.com/news/events/list"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      onClick={() =>
+                        handleOpenNewTab("https://fconline.nexon.com/news/events/list")
+                      }
                     >
                       이벤트
                     </a>
@@ -164,36 +164,36 @@ const Header = () => {
                 <ul>
                   <li>
                     <a
-                      href="https://fconline.nexon.com/community/recommend"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      onClick={() =>
+                        handleOpenNewTab("https://fconline.nexon.com/community/recommend")
+                      }
                     >
                       추천 게시판
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://fconline.nexon.com/community/free/list"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      onClick={() =>
+                        handleOpenNewTab("https://fconline.nexon.com/community/free/list")
+                      }
                     >
                       자유 게시판
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://fconline.nexon.com/community/tip/list"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      onClick={() =>
+                        handleOpenNewTab("https://fconline.nexon.com/community/tip/list")
+                      }
                     >
                       팁
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://fconline.nexon.com/community/qa/list"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      onClick={() =>
+                        handleOpenNewTab("https://fconline.nexon.com/community/qa/list")
+                      }
                     >
                       질문 게시판
                     </a>
@@ -211,36 +211,36 @@ const Header = () => {
                 <ul>
                   <li>
                     <a
-                      href="https://fconline.nexon.com/Club/List"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      onClick={() =>
+                        handleOpenNewTab("https://fconline.nexon.com/Club/List")
+                      }
                     >
                       내 클럽
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://fconline.nexon.com/Club/List"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      onClick={() =>
+                        handleOpenNewTab("https://fconline.nexon.com/Club/List")
+                      }
                     >
                       클럽 리스트
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://fconline.nexon.com/ClubPromotion/PromotionList"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      onClick={() =>
+                        handleOpenNewTab("https://fconline.nexon.com/ClubPromotion/PromotionList")
+                      }
                     >
                       클럽 홍보
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://fconline.nexon.com/Club/Create"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      onClick={() =>
+                        handleOpenNewTab("https://fconline.nexon.com/Club/Create")
+                      }
                     >
                       클럽 생성
                     </a>
@@ -258,36 +258,36 @@ const Header = () => {
                 <ul>
                   <li>
                     <a
-                      href="https://shop.fconline.nexon.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      onClick={() =>
+                        handleOpenNewTab("https://shop.fconline.nexon.com/")
+                      }
                     >
                       웹 상점
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://shop.fconline.nexon.com/Membership"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      onClick={() =>
+                        handleOpenNewTab("https://shop.fconline.nexon.com/Membership")
+                      }
                     >
                       멤버십
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://shop.fconline.nexon.com/ShopEvent/Index"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      onClick={() =>
+                        handleOpenNewTab("https://shop.fconline.nexon.com/Events/240605/EuroMarble")
+                      }
                     >
                       스페셜 상점
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://shop.fconline.nexon.com/mypage"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      onClick={() =>
+                        handleOpenNewTab("https://shop.fconline.nexon.com/Mypage?n1PriceType=1")
+                      }
                     >
                       마이페이지
                     </a>
@@ -307,27 +307,27 @@ const Header = () => {
                 <ul>
                   <li>
                     <a
-                      href="https://fconline.nexon.com/datacenter/rank"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      onClick={() =>
+                        handleOpenNewTab("https://fconline.nexon.com/datacenter/rank")
+                      }
                     >
                       공식경기 랭킹
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://fconline.nexon.com/datacenter/rank_volta_topplayer"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      onClick={() =>
+                        handleOpenNewTab("https://fconline.nexon.com/datacenter/rank_volta_topplayer")
+                      }
                     >
                       볼타라이브 랭킹
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://fconline.nexon.com/datacenter/rank_arena"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      onClick={() =>
+                        handleOpenNewTab("https://fconline.nexon.com/datacenter/rank_arena")
+                      }
                     >
                       아레나 모드 랭킹
                     </a>

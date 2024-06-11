@@ -61,6 +61,7 @@ p{margin:0;}
   .searchArea > div > span{position:absolute; top:25%; right:2%; cursor:pointer; font-size:24px;}
 
   .toggleSlider{position:absolute; top:100px; text-align: center; width:100%;}
+  .toggleSlider > ul{padding-left:0;}
   .toggleSlider > ul li{border-bottom: 1px solid white; background-color: rgba(0, 0, 0, 0.8); color:white; font-family: "Noto Sans KR", sans-serif; font-size:12px; font-weight: 400; line-height: 30px;}
 
   .noticeArea{width:100%; margin:0 auto;}
@@ -119,7 +120,13 @@ p{margin:0;}
     position:relative;
     width:350px;
     padding:350px 0;
+    margin-top:10px;
   }
+
+  .seemorePosition > p{position: absolute; width:100%;}
+  .seemorePosition > p.nick1{top:9px; background-color: rgba(0, 0, 0, 0.3); border-bottom: 1px solid rgba(0, 0, 0, 0.3);}
+  .seemorePosition > p.nick2{bottom:9px; background-color: rgba(0, 0, 0, 0.3); border-top: 1px solid rgba(0, 0, 0, 0.3);}
+
 
   .seemorePosition > div{display:inline; position: absolute;}
 
@@ -285,7 +292,13 @@ p{margin:0;}
     position:relative;
     width:530px;
     padding:350px 0;
+    margin-top:15px;
   }
+
+  .seemorePosition > p{position: absolute; width:100%;}
+  .seemorePosition > p.nick1{top:9px; background-color: rgba(0, 0, 0, 0.3); border-bottom: 1px solid rgba(0, 0, 0, 0.3);}
+  .seemorePosition > p.nick2{bottom:9px; background-color: rgba(0, 0, 0, 0.3); border-top: 1px solid rgba(0, 0, 0, 0.3);}
+
 
   .seemorePosition > div{display:inline; position: absolute;}
 
@@ -451,6 +464,7 @@ p{margin:0;}
     position:relative;
     width:530px;
     padding:350px 0;
+    margin-top:20px;
   }
 
   .seemorePosition > p{position: absolute; width:100%;}
