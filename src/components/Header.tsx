@@ -107,7 +107,9 @@ const Header = () => {
                   <li>
                     <a
                       onClick={() =>
-                        handleOpenNewTab("https://fconline.nexon.com/news/notice/list")
+                        handleOpenNewTab(
+                          "https://fconline.nexon.com/news/notice/list"
+                        )
                       }
                     >
                       공지사항
@@ -116,7 +118,9 @@ const Header = () => {
                   <li>
                     <a
                       onClick={() =>
-                        handleOpenNewTab("https://fconline.nexon.com/news/play/list")
+                        handleOpenNewTab(
+                          "https://fconline.nexon.com/news/play/list"
+                        )
                       }
                     >
                       개발자 노트
@@ -125,7 +129,9 @@ const Header = () => {
                   <li>
                     <a
                       onClick={() =>
-                        handleOpenNewTab("https://fconline.nexon.com/news/nf/list")
+                        handleOpenNewTab(
+                          "https://fconline.nexon.com/news/nf/list"
+                        )
                       }
                     >
                       넥스트 필드
@@ -134,7 +140,9 @@ const Header = () => {
                   <li>
                     <a
                       onClick={() =>
-                        handleOpenNewTab("https://fconline.nexon.com/news/update/list")
+                        handleOpenNewTab(
+                          "https://fconline.nexon.com/news/update/list"
+                        )
                       }
                     >
                       업데이트
@@ -143,7 +151,9 @@ const Header = () => {
                   <li>
                     <a
                       onClick={() =>
-                        handleOpenNewTab("https://fconline.nexon.com/news/events/list")
+                        handleOpenNewTab(
+                          "https://fconline.nexon.com/news/events/list"
+                        )
                       }
                     >
                       이벤트
@@ -165,7 +175,9 @@ const Header = () => {
                   <li>
                     <a
                       onClick={() =>
-                        handleOpenNewTab("https://fconline.nexon.com/community/recommend")
+                        handleOpenNewTab(
+                          "https://fconline.nexon.com/community/recommend"
+                        )
                       }
                     >
                       추천 게시판
@@ -174,7 +186,9 @@ const Header = () => {
                   <li>
                     <a
                       onClick={() =>
-                        handleOpenNewTab("https://fconline.nexon.com/community/free/list")
+                        handleOpenNewTab(
+                          "https://fconline.nexon.com/community/free/list"
+                        )
                       }
                     >
                       자유 게시판
@@ -183,7 +197,9 @@ const Header = () => {
                   <li>
                     <a
                       onClick={() =>
-                        handleOpenNewTab("https://fconline.nexon.com/community/tip/list")
+                        handleOpenNewTab(
+                          "https://fconline.nexon.com/community/tip/list"
+                        )
                       }
                     >
                       팁
@@ -192,7 +208,9 @@ const Header = () => {
                   <li>
                     <a
                       onClick={() =>
-                        handleOpenNewTab("https://fconline.nexon.com/community/qa/list")
+                        handleOpenNewTab(
+                          "https://fconline.nexon.com/community/qa/list"
+                        )
                       }
                     >
                       질문 게시판
@@ -230,7 +248,9 @@ const Header = () => {
                   <li>
                     <a
                       onClick={() =>
-                        handleOpenNewTab("https://fconline.nexon.com/ClubPromotion/PromotionList")
+                        handleOpenNewTab(
+                          "https://fconline.nexon.com/ClubPromotion/PromotionList"
+                        )
                       }
                     >
                       클럽 홍보
@@ -239,7 +259,9 @@ const Header = () => {
                   <li>
                     <a
                       onClick={() =>
-                        handleOpenNewTab("https://fconline.nexon.com/Club/Create")
+                        handleOpenNewTab(
+                          "https://fconline.nexon.com/Club/Create"
+                        )
                       }
                     >
                       클럽 생성
@@ -268,7 +290,9 @@ const Header = () => {
                   <li>
                     <a
                       onClick={() =>
-                        handleOpenNewTab("https://shop.fconline.nexon.com/Membership")
+                        handleOpenNewTab(
+                          "https://shop.fconline.nexon.com/Membership"
+                        )
                       }
                     >
                       멤버십
@@ -277,7 +301,9 @@ const Header = () => {
                   <li>
                     <a
                       onClick={() =>
-                        handleOpenNewTab("https://shop.fconline.nexon.com/Events/240605/EuroMarble")
+                        handleOpenNewTab(
+                          "https://shop.fconline.nexon.com/Events/240605/EuroMarble"
+                        )
                       }
                     >
                       스페셜 상점
@@ -286,7 +312,9 @@ const Header = () => {
                   <li>
                     <a
                       onClick={() =>
-                        handleOpenNewTab("https://shop.fconline.nexon.com/Mypage?n1PriceType=1")
+                        handleOpenNewTab(
+                          "https://shop.fconline.nexon.com/Mypage?n1PriceType=1"
+                        )
                       }
                     >
                       마이페이지
@@ -308,7 +336,9 @@ const Header = () => {
                   <li>
                     <a
                       onClick={() =>
-                        handleOpenNewTab("https://fconline.nexon.com/datacenter/rank")
+                        handleOpenNewTab(
+                          "https://fconline.nexon.com/datacenter/rank"
+                        )
                       }
                     >
                       공식경기 랭킹
@@ -317,7 +347,9 @@ const Header = () => {
                   <li>
                     <a
                       onClick={() =>
-                        handleOpenNewTab("https://fconline.nexon.com/datacenter/rank_volta_topplayer")
+                        handleOpenNewTab(
+                          "https://fconline.nexon.com/datacenter/rank_volta_topplayer"
+                        )
                       }
                     >
                       볼타라이브 랭킹
@@ -326,7 +358,9 @@ const Header = () => {
                   <li>
                     <a
                       onClick={() =>
-                        handleOpenNewTab("https://fconline.nexon.com/datacenter/rank_arena")
+                        handleOpenNewTab(
+                          "https://fconline.nexon.com/datacenter/rank_arena"
+                        )
                       }
                     >
                       아레나 모드 랭킹
